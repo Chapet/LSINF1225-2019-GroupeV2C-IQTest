@@ -14,7 +14,7 @@ public class DbHelper {
         myhelper = new MyDbHelper(context);
     }
 
-    public long insertData(String login, String name, String pwd) {
+    /*public long insertData(String login, String name, String pwd) {
         SQLiteDatabase dbb = myhelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(MyDbHelper.LOGIN, login);
@@ -44,9 +44,19 @@ public class DbHelper {
 
         int count = db.delete(MyDbHelper.TABLE_NAME, MyDbHelper.NAME + " = ?", whereArgs);
         return count; //the number of rows affected
+    }*/
+
+
+    static class User_T {
+        private static final String LOGIN = "_login"; //col 1 (primary key) -> il faut check pr les erreurs
+        private static final String NAME = "Name"; //col 2
+        private static final String PASSWORD = "Password"; //col 3
+        private static final String CREATE_TABLE = "CREATE TABLE " + MyDbHelper.TABLE_NAME + " (" +
+                LOGIN + " TEXT PRIMARY KEY, " + NAME + " TEXT, " + PASSWORD + " TEXT);";
+        private static final String DROP_TABLE = "DROP TABLE IF EXISTS " + MyDbHelper.TABLE_NAME;
+
+        
     }
-
-
 
 
     static class MyDbHelper extends SQLiteOpenHelper {
@@ -54,12 +64,6 @@ public class DbHelper {
         private static final String DATABASE_NAME = "IQ_WHIZZ"; //db name
         private static final int DATABASE_VERSION = 1; //db version
         private static final String TABLE_NAME = "IQ_WHIZZ";
-        private static final String LOGIN = "_login"; //col 1 (primary key) -> il faut check pr les erreurs
-        private static final String NAME = "Name"; //col 2
-        private static final String PASSWORD = "Password"; //col 3
-        private static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + " (" +
-                LOGIN + " TEXT PRIMARY KEY, " + NAME + " TEXT, " + PASSWORD + " TEXT);";
-        private static final String DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
 
         private Context context;
 
@@ -71,7 +75,7 @@ public class DbHelper {
         @Override
         public void onCreate(SQLiteDatabase db) {
             try {
-                db.execSQL(CREATE_TABLE);
+                db.execSQL(); //CREATE
             } catch (Exception e) {
 
             }
@@ -80,7 +84,7 @@ public class DbHelper {
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
             try {
-                db.execSQL(DROP_TABLE);
+                db.execSQL(); //DROP
                 onCreate(db);
             } catch (Exception e) {
             }
