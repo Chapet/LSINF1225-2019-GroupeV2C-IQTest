@@ -20,16 +20,16 @@ public class DbHelper {
         contentValues.put(MyDbHelper.LOGIN, login);
         contentValues.put(MyDbHelper.NAME, name);
         contentValues.put(MyDbHelper.PASSWORD, pwd);
-        long id = dbb.insert(MyDbHelper.TABLE__NAME, null, contentValues);
+        long id = dbb.insert(MyDbHelper.TABLE_NAME, null, contentValues);
         return id;
     }
 
     public String getData() {
         SQLiteDatabase dbb = myhelper.getReadableDatabase();
         String[] columns = {MyDbHelper.LOGIN, MyDbHelper.NAME, MyDbHelper.PASSWORD};
-        Cursor cursor = dbb.query(MyDbHelper.TABLE__NAME, columns, null, null,null, null, null);
+        Cursor cursor = dbb.query(MyDbHelper.TABLE_NAME, columns, null, null, null, null, null);
         StringBuffer buffer = new StringBuffer();
-        while(cursor.moveToNext()) {
+        while (cursor.moveToNext()) {
             int cid = cursor.getInt(cursor.getColumnIndex(MyDbHelper.LOGIN));
             String name = cursor.getString(cursor.getColumnIndex(MyDbHelper.NAME));
             String pwd = cursor.getString(cursor.getColumnIndex(MyDbHelper.PASSWORD));
@@ -38,19 +38,28 @@ public class DbHelper {
         return buffer.toString();
     }
 
+    public int delete(String aname) {
+        SQLiteDatabase db = myhelper.getWritableDatabase();
+        String[] whereArgs = {aname};
+
+        int count = db.delete(MyDbHelper.TABLE_NAME, MyDbHelper.NAME + " = ?", whereArgs);
+        return count; //the number of rows affected
+    }
+
+
 
 
     static class MyDbHelper extends SQLiteOpenHelper {
 
         private static final String DATABASE_NAME = "IQ_WHIZZ"; //db name
         private static final int DATABASE_VERSION = 1; //db version
-        private static final String TABLE__NAME = "IQ_WHIZZ";
+        private static final String TABLE_NAME = "IQ_WHIZZ";
         private static final String LOGIN = "_login"; //col 1 (primary key) -> il faut check pr les erreurs
         private static final String NAME = "Name"; //col 2
         private static final String PASSWORD = "Password"; //col 3
-        private static final String CREATE_TABLE = "CREATE TABLE " + TABLE__NAME + " (" +
+        private static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + " (" +
                 LOGIN + " TEXT PRIMARY KEY, " + NAME + " TEXT, " + PASSWORD + " TEXT);";
-        private static final String DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE__NAME;
+        private static final String DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
 
         private Context context;
 
