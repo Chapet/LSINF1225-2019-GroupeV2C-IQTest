@@ -1,3 +1,28 @@
 <resources>
-    <string name="app_name">IQ Whizz</string>
+    <string name="app_name">IQWhizz</string>
+    <string name="send_username">Username</string>
+    <string name="send_password">Password</string>
+    <string name="connexion_button">Sign in</string>
+    <string name="signup_button">Sign up</string>
+    <string name="choose_totaltest">Complete test</string>
+    <string name="choose_quicktest">Quick test</string>
+    <string name="choose_flashtest">Flash test</string>
+    <string name="choose_categories">Categories</string>
+    <string name="choose_myscores">My scores</string>
+    <string name="choose_category">Choose your favorite category</string>
+    <string name="logicaltest">Logical test</string>
+    <string name="mathtest">Mathematical test</string>
+    <string name="memorytest">Memory test</string>
+    <string name="spatialtest">Spatial test</string>
+    <string name="mentalarith">Mental arithmetic</string>
+    <string name="paperfold">Paper folding</string>
+    <string name="menu">Menu</string>
+    <string name="_40_minutes_test">40 minutes test</string>
+    <string name="_5_minutes_test">5 minutes test</string>
+    <string name="choose_your_categorie_to_train_your_brain">Choose your categorie to train your brain</string>
+    <string name="check_your_score">Check your score</string>
+    <string name="welcome_to_iq_whizz">Welcome to IQ Whizz !</string>
+    <string name="tap_to_continue">Tap To Continue</string>
+    <string name="it_tests_your_rapidity">It tests your rapidity</string>
+
 </resources>

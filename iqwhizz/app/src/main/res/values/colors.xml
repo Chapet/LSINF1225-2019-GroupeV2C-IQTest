@@ -3,4 +3,9 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="ecriture">#454545</color>
+    <color name="blanc">#fff</color>
+    <!--467670-->
+
 </resources>

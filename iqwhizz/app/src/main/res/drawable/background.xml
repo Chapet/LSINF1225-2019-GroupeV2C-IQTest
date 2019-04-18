@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:startColor="#85C8BF"
+        android:endColor="#D9DEF2"
+        android:angle="270"/>
+</shape>
+
+
+<!--#8FFE20 pour toolbar verte #B3EF77  #D5FDAE -->
+<!--#97A6E3 pour toolbar bleu plus fonce-->
+<!--bleu start : #B8C4F3, bleu end :#D9DEF2-->

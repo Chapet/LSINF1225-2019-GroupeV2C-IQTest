@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/titletop"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/choose_category"
+        android:textColor="@color/ecriture"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/logical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/toptitletext"
+        android:layout_marginBottom="@dimen/bott"
+        android:text="@string/logicaltest"
+        android:textColor="@color/ecriture"
+        android:textSize="@dimen/text" />
+
+    <TextView
+        android:id="@+id/math"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/text"
+        android:layout_marginBottom="@dimen/bott"
+        android:text="@string/mathtest"
+        android:textColor="@color/ecriture" />
+
+    <TextView
+        android:id="@+id/memory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/text"
+        android:layout_marginBottom="@dimen/bott"
+        android:text="@string/memorytest"
+        android:textColor="@color/ecriture" />
+
+    <TextView
+        android:id="@+id/spatial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/text"
+        android:layout_marginBottom="@dimen/bott"
+        android:text="@string/spatialtest"
+        android:textColor="@color/ecriture"
+        />
+
+    <TextView
+        android:id="@+id/mental"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/text"
+        android:layout_marginBottom="@dimen/bott"
+        android:text="@string/mentalarith"
+        android:textColor="@color/ecriture" />
+
+
+    <TextView
+        android:id="@+id/paper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/text"
+        android:layout_marginBottom="@dimen/bott"
+        android:text="@string/paperfold"
+        android:textColor="@color/ecriture" />
+
+
+</LinearLayout>
