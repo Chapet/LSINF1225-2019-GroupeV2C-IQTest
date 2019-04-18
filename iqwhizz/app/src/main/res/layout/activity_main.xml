@@ -13,13 +13,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
         android:layout_marginLeft="37dp"
-        android:layout_marginTop="82dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="37dp"
         android:layout_marginRight="37dp"
         android:layout_marginBottom="603dp"
         android:text="@string/welcome_to_iq_whizz"
         android:typeface="serif"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="@dimen/textwsize"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,21 +28,21 @@
 
 
     <TextView
-        android:id="@+id/Tap"
+        android:id="@+id/tap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tap_to_continue"
         android:typeface="serif"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:visibility="visible"
+        android:textSize="@dimen/textwsize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/ecriture"
         app:layout_constraintVertical_bias="0.844" />
 
     <ImageView
-        android:id="@+id/TapBut"
+        android:id="@+id/logodem"
         android:layout_width="237dp"
         android:layout_height="343dp"
         android:layout_marginStart="82dp"
@@ -57,7 +57,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logobon" />
 
 
 

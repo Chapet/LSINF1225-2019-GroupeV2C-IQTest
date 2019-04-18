@@ -14,7 +14,7 @@
     <dimen name="toptitletext">48dp</dimen>
     <dimen name="titletop">24dp</dimen>
     <dimen name="bott">36dp</dimen>
-    <dimen name="toptextsanstitle">96dp</dimen>
+    <dimen name="toptextsanstitle">70dp</dimen>
 
     <!--MEPwelcome-->
     <dimen name="imwtop">25dp</dimen>

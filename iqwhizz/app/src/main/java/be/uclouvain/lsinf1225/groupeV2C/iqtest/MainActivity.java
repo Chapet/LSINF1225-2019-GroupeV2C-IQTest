@@ -8,18 +8,19 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView Tap;
+    private TextView tapbut;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.Tap = (TextView) findViewById(R.id.Tap);
-        Tap.setOnClickListener(new View.OnClickListener() {
+        this.tapbut = (TextView) findViewById(R.id.tap);
+        tapbut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent conins = new Intent(getApplicationContext(), connexion.class);
-                startActivity(conins);
+                Intent co = new Intent(getApplicationContext(), connexion.class);
+                startActivity(co);
                 finish();
             }
         });
