@@ -13,7 +13,7 @@ public class connexion extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_connexion);
 
         this.men = (Button) findViewById(R.id.men);
         men.setOnClickListener(new View.OnClickListener() {
