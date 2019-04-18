@@ -22,7 +22,7 @@
     <string name="choose_your_categorie_to_train_your_brain">Choose your categorie to train your brain</string>
     <string name="check_your_score">Check your score</string>
     <string name="welcome_to_iq_whizz">Welcome to IQ Whizz !</string>
-    <string name="tap_to_continue">Tap here to continue</string>
+    <string name="tap_to_continue">Tap to continue</string>
     <string name="it_tests_your_rapidity">Test your rapidity</string>
 
 </resources>
