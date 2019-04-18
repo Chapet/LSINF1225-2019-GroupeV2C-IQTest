@@ -5,23 +5,14 @@
     android:layout_height="match_parent"
     android:background="@drawable/background">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:textColor="@color/ecriture"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/titletop"
-        android:layout_gravity="center"
-        android:text="@string/menu"
-        android:typeface="serif"
-        android:textSize="@dimen/title" />
+
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/ecriture"
-        android:layout_marginTop="@dimen/toptitletext"
+        android:layout_marginTop="@dimen/toptextsanstitle"
         android:layout_gravity="center"
         android:text="@string/choose_totaltest"
         android:textSize="@dimen/text" />

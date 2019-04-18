@@ -1,4 +1,4 @@
-package com.example.iqwizz;
+package be.uclouvain.lsinf1225.groupeV2C.iqtest;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
