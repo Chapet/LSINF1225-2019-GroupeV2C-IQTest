@@ -34,7 +34,6 @@ public class menu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent cat = new Intent(getApplicationContext(), category.class);
                 startActivity(cat);
-                finish();
             }
         });
 
@@ -44,7 +43,6 @@ public class menu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent compl = new Intent(getApplicationContext(), Rules.class);
                 startActivity(compl);
-                finish();
             }
         });
 
@@ -54,7 +52,6 @@ public class menu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent quick = new Intent(getApplicationContext(), Rules.class);
                 startActivity(quick);
-                finish();
             }
         });
 
@@ -64,7 +61,6 @@ public class menu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent flash = new Intent(getApplicationContext(), Rules.class);
                 startActivity(flash);
-                finish();
             }
         });
 
@@ -73,13 +69,8 @@ public class menu extends AppCompatActivity {
         setSupportActionBar(toolbar); // Setting/replace toolbar as the ActionBar
         toolbar.setTitle(getResources().getString(R.string.menu));
         toolbar.setNavigationIcon(R.drawable.log_out);
-        // implement setNavigationOnClickListener event
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dLayout.openDrawer(Gravity.RIGHT);
-            }
-        });
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         setNavigationDrawer(); // call method
 
     }

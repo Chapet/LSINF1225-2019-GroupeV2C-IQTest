@@ -22,7 +22,6 @@ public class connexion extends AppCompatActivity {
             public void onClick(View v) {
                 Intent signin = new Intent(getApplicationContext(), menu.class);
                 startActivity(signin);
-                finish();
             }
         });
 
@@ -32,7 +31,6 @@ public class connexion extends AppCompatActivity {
             public void onClick(View v) {
                 Intent signup = new Intent(getApplicationContext(), inscription.class);
                 startActivity(signup);
-                finish();
             }
         });
     }
