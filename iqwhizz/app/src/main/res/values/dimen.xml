@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!--MEPwelcome-->
+    <dimen name="imwtop">170dp</dimen>
+    <dimen name="imwbott">238dp</dimen>
+    <dimen name="titlewsize">40sp</dimen>
+    <dimen name="titlewtop">100dp</dimen>
+
+    <!--MEPconnexion-->
+    <dimen name="textctop">32dp</dimen> <!--entre une image et du texte-->
+    <dimen name="boutonctopbot">10dp</dimen> <!--entre deux boutons ou entre bouton et texte c est le meme top et bott-->
+
     <!--Texte-->
-    <dimen name="title">32sp</dimen>
     <dimen name="text">24sp</dimen>
     <dimen name="bouton">16sp</dimen>
     <dimen name="subtext">16sp</dimen>
@@ -10,17 +20,11 @@
     <dimen name="size_logo">240dp</dimen>
 
 
-    <!--Mep-->
-    <dimen name="toptitletext">48dp</dimen>
-    <dimen name="titletop">24dp</dimen>
-    <dimen name="bott">36dp</dimen>
-    <dimen name="toptextsanstitle">70dp</dimen>
+    <!--Mepmenu et cat-->
+    <dimen name="bott">36dp</dimen> <!-- entre 2 choix-->
+    <dimen name="titletop">70dp</dimen> <!--entre la toolbar et le premier texte-->
 
-    <!--MEPwelcome-->
-    <dimen name="imwtop">25dp</dimen>
-    <dimen name="imwbott">96dp</dimen>
-    <dimen name="titlewsize">46sp</dimen>
-    <dimen name="textwsize">24sp</dimen>
+
 
 
 </resources>
