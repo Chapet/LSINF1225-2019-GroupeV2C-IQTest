@@ -18,6 +18,9 @@ import android.widget.Toast;
 public class menu extends AppCompatActivity {
 
     private TextView categories;
+    private TextView completetest;
+    private TextView quicktest;
+    private TextView flashtest;
     DrawerLayout dLayout;
 
     @Override
@@ -34,6 +37,37 @@ public class menu extends AppCompatActivity {
                 finish();
             }
         });
+
+        this.completetest = (TextView) findViewById(R.id.completetest);
+        completetest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent compl = new Intent(getApplicationContext(), Rules.class);
+                startActivity(compl);
+                finish();
+            }
+        });
+
+        this.quicktest= (TextView) findViewById(R.id.quicktest);
+        quicktest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent quick = new Intent(getApplicationContext(), Rules.class);
+                startActivity(quick);
+                finish();
+            }
+        });
+
+        this.flashtest = (TextView) findViewById(R.id.flashtest);
+        flashtest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent flash = new Intent(getApplicationContext(), Rules.class);
+                startActivity(flash);
+                finish();
+            }
+        });
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar); // get the reference of Toolbar
         setSupportActionBar(toolbar); // Setting/replace toolbar as the ActionBar
