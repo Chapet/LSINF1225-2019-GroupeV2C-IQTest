@@ -1,4 +1,4 @@
-package be.uclouvain.lsinf1225.groupeV2C.iqtest;
+/*package be.uclouvain.lsinf1225.groupeV2C.iqtest;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -14,7 +14,7 @@ public class DbHelper {
         myhelper = new MyDbHelper(context);
     }
 
-    /*public long insertData(String login, String name, String pwd) {
+    public long insertData(String login, String name, String pwd) {
         SQLiteDatabase dbb = myhelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(MyDbHelper.LOGIN, login);
@@ -44,7 +44,7 @@ public class DbHelper {
 
         int count = db.delete(MyDbHelper.TABLE_NAME, MyDbHelper.NAME + " = ?", whereArgs);
         return count; //the number of rows affected
-    }*/
+    }
 
 
     static class User_T {
@@ -91,3 +91,4 @@ public class DbHelper {
         }
     }
 }
+*/
