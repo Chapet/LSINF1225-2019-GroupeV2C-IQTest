@@ -30,12 +30,8 @@ public class inscription extends AppCompatActivity {
         setSupportActionBar(toolbar); // Setting/replace toolbar as the ActionBar
         toolbar.setTitle(getResources().getString(R.string.sign_up));
         toolbar.setNavigationIcon(R.drawable.retour);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // implement setNavigationOnClickListener event
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            }
-        });
         username = findViewById(R.id.editText1);
         password = findViewById(R.id.editText2);
         birthyear = findViewById(R.id.editText3);
@@ -90,5 +86,7 @@ public class inscription extends AppCompatActivity {
     }
     public void openActivity2(){
         Intent intent = new Intent(this, menu.class);
-        startActivity(intent);}
+        startActivity(intent);
+        finish();
+    }
 }
