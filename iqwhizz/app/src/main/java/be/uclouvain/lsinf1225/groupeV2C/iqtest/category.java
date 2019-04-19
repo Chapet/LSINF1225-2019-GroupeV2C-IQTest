@@ -24,7 +24,8 @@ public class category extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar); // get the reference of Toolbar
         setSupportActionBar(toolbar); // Setting/replace toolbar as the ActionBar
-
+        toolbar.setTitle(getResources().getString(R.string.category));
+        toolbar.setNavigationIcon(R.drawable.retour);
         // implement setNavigationOnClickListener event
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

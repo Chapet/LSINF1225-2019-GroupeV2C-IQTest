@@ -71,7 +71,8 @@ public class menu extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar); // get the reference of Toolbar
         setSupportActionBar(toolbar); // Setting/replace toolbar as the ActionBar
-
+        toolbar.setTitle(getResources().getString(R.string.menu));
+        toolbar.setNavigationIcon(R.drawable.log_out);
         // implement setNavigationOnClickListener event
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
