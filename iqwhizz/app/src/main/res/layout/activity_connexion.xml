@@ -10,7 +10,7 @@
         android:layout_height="@dimen/size_logo"
         android:layout_gravity="center"
         android:layout_marginTop="84dp"
-        android:src="@drawable/logo" />
+        android:src="@drawable/logobon" />
 
     <EditText
         android:id="@+id/editText"
@@ -60,7 +60,7 @@
 
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
