@@ -4,12 +4,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/logo"
+        android:icon="@drawable/logorond"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".connexion"></activity>
+        <activity android:name=".inscription"></activity>
+        <activity android:name=".connexion" />
         <activity android:name=".menu" />
         <activity android:name=".category" />
         <activity android:name=".MainActivity">
