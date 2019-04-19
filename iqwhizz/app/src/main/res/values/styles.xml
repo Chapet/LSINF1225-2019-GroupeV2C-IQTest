@@ -6,6 +6,8 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <!--Idee : dans parametre pouvoir changer la couleur de fond, rose vert ou bleu : par défait bleu-->
     </style>
 
 </resources>
