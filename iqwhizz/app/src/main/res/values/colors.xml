@@ -3,8 +3,9 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="red">#EC0D0D</color>
     <color name="toolbar">#375D81</color>
-    <color name="ecriture">#454545</color>
+    <color name="ecriture">#2B2E31</color>
     <color name="blanc">#fff</color>
     <!--467670-->
 

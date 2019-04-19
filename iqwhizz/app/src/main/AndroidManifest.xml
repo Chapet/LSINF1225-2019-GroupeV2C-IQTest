@@ -13,6 +13,7 @@
         <activity android:name=".connexion" />
         <activity android:name=".menu" />
         <activity android:name=".category" />
+        <activity android:name=".Rules" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
