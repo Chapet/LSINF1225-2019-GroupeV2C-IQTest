@@ -28,6 +28,7 @@
                 android:orientation="vertical">
 
 
+
                 <TextView
                     android:id="@+id/math"
                     android:layout_width="300dp"
@@ -63,13 +64,13 @@
                     android:textSize="@dimen/text" />
 
                 <TextView
-                    android:id="@+id/time3"
+                    android:id="@+id/time2"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="@dimen/bott"
                     android:gravity="center"
-                    android:text="@string/complete"
+                    android:text="@string/quick"
                     android:textColor="@color/blanc"
                     android:textSize="@dimen/text" />
 
@@ -81,6 +82,7 @@
                     android:text="@string/go"
                     android:textColor="@color/ecriture"
                     android:textSize="@dimen/bouton" />
+
             </LinearLayout>
         </FrameLayout>
     </LinearLayout>
