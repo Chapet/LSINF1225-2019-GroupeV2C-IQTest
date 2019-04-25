@@ -10,15 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".friends"
+            android:label="@string/friends"
+            android:parentActivityName=".menu"
+            />
+        <activity
             android:name=".rulesquick"
             android:label="@string/Rules"
-            android:parentActivityName=".menu"/>
-
+            android:parentActivityName=".menu" />
         <activity
             android:name=".rulesflash"
             android:label="@string/Rules"
-            android:parentActivityName=".menu"/>
-
+            android:parentActivityName=".menu" />
         <activity
             android:name=".inscription"
             android:label="Inscription"
