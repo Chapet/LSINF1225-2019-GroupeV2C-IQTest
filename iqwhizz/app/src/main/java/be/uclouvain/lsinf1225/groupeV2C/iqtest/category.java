@@ -24,14 +24,10 @@ public class category extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar); // get the reference of Toolbar
         setSupportActionBar(toolbar); // Setting/replace toolbar as the ActionBar
+        toolbar.setTitle(getResources().getString(R.string.category));
+        toolbar.setNavigationIcon(R.drawable.retour);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        // implement setNavigationOnClickListener event
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dLayout.openDrawer(Gravity.RIGHT);
-            }
-        });
         setNavigationDrawer(); // call method
     }
 

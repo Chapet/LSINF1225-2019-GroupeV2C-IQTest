@@ -6,8 +6,9 @@
     android:layout_height="wrap_content"
     android:background="@color/toolbar"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
-    app:title="@string/welcome_to_iq_whizz"
-    app:navigationIcon="@drawable/retour"
     app:titleTextColor="#FFF">
+    <!--app:title="@string/welcome_to_iq_whizz"
+    app:navigationIcon="@drawable/retour"-->
+
     <!-- navigation button and title for the Toolbar-->
 </android.support.v7.widget.Toolbar>

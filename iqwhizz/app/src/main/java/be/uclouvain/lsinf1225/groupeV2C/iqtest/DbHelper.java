@@ -75,7 +75,7 @@ public class DbHelper {
         @Override
         public void onCreate(SQLiteDatabase db) {
             try {
-                db.execSQL(); //CREATE
+                //db.execSQL(); //CREATE
             } catch (Exception e) {
 
             }
@@ -84,7 +84,7 @@ public class DbHelper {
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
             try {
-                db.execSQL(); //DROP
+                //db.execSQL(); //DROP
                 onCreate(db);
             } catch (Exception e) {
             }

@@ -3,6 +3,8 @@ package be.uclouvain.lsinf1225.groupeV2C.iqtest;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,7 +26,12 @@ public class inscription extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inscription);
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar); // get the reference of Toolbar
+        setSupportActionBar(toolbar); // Setting/replace toolbar as the ActionBar
+        toolbar.setTitle(getResources().getString(R.string.sign_up));
+        toolbar.setNavigationIcon(R.drawable.retour);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // implement setNavigationOnClickListener event
         username = findViewById(R.id.editText1);
         password = findViewById(R.id.editText2);
         birthyear = findViewById(R.id.editText3);
@@ -79,5 +86,7 @@ public class inscription extends AppCompatActivity {
     }
     public void openActivity2(){
         Intent intent = new Intent(this, menu.class);
-        startActivity(intent);}
+        startActivity(intent);
+        finish();
+    }
 }

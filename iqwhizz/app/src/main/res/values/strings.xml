@@ -44,4 +44,11 @@
     <string name="please_write_a_correct_username_minimum_3_letter">Invalid username (minimum 3 letters)</string>
     <string name="type_your_username">Type your username</string>
     <string name="username">Username</string>
+    <string name="practice_different_categories_to_improve_your_iq_results_or_for_healty_brain_training">Practice different categories to improve your IQ results or for healty brain training!</string>
+    <string name="Rules">Rules</string>
+    <string name="category">category</string>
+    <string name="rule_1">1. A correct answer will add one point to your score</string>
+    <string name="rule_2">2. A wrong answer will add no point to your score</string>
+    <string name="rule_3">3. If you skip, it will add no point to your score</string>
+    <string name="go">Let\'s go!</string>
 </resources>
