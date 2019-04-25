@@ -1,80 +1,31 @@
 package be.uclouvain.lsinf1225.groupeV2C.iqtest;
 
-import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
-public class menu extends AppCompatActivity {
-
-    private TextView categories;
-    private TextView completetest;
-    private TextView quicktest;
-    private TextView flashtest;
+public class rulesflash extends AppCompatActivity {
     DrawerLayout dLayout;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
-
-        this.categories = (TextView) findViewById(R.id.categories);
-        categories.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent cat = new Intent(getApplicationContext(), category.class);
-                startActivity(cat);
-            }
-        });
-
-        this.completetest = (TextView) findViewById(R.id.completetest);
-        completetest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent compl = new Intent(getApplicationContext(), Rules.class);
-                startActivity(compl);
-            }
-        });
-
-        this.quicktest= (TextView) findViewById(R.id.quicktest);
-        quicktest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent quick = new Intent(getApplicationContext(), rulesquick.class);
-                startActivity(quick);
-            }
-        });
-
-        this.flashtest = (TextView) findViewById(R.id.flashtest);
-        flashtest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent flash = new Intent(getApplicationContext(), rulesflash.class);
-                startActivity(flash);
-            }
-        });
-
-
+        setContentView(R.layout.activity_rulesflash);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar); // get the reference of Toolbar
         setSupportActionBar(toolbar); // Setting/replace toolbar as the ActionBar
-        toolbar.setTitle(getResources().getString(R.string.menu));
-        toolbar.setNavigationIcon(R.drawable.log_out);
+        toolbar.setTitle(getResources().getString(R.string.Rules));
+        toolbar.setNavigationIcon(R.drawable.retour);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         setNavigationDrawer(); // call method
-
     }
-
     public boolean onCreateOptionsMenu(Menu menu) {
 // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_layout, menu);
