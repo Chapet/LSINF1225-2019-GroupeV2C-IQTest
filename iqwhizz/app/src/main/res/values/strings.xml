@@ -51,18 +51,16 @@
     <string name="rule_2">2. A wrong answer will add no point to your score</string>
     <string name="rule_3">3. If you skip, it will add no point to your score</string>
     <string name="go">Let\'s go!</string>
-<<<<<<< HEAD
-    <string name="friends">Friends</string>
-    <string name="ranking">Ranking</string>
-    <string name="add_a_friend">Add a friend</string>
     <string name="language">Language</string>
     <string name="sound">Sound</string>
     <string name="francais">Français</string>
     <string name="anglais">anglais</string>
-=======
     <string name="flash">4. You have 5 minutes to answer as much questions as possible</string>
     <string name="complete">4. You have 40 minutes to answer the 40 questions</string>
     <string name="quick">4. You have 5 minutes to answer the 5 questions</string>
     <string name="friends">Friends</string>
->>>>>>> master
+    <string name="add_a_friend">Add a friend</string>
+    <string name="ranking">Ranking</string>
+    <string name="engels">engels</string>
+    <string name="english">english</string>
 </resources>
