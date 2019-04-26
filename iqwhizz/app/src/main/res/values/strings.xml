@@ -58,10 +58,7 @@
     <string name="sound">Sound</string>
     <string name="francais">Français</string>
     <string name="anglais">anglais</string>
-=======
     <string name="flash">4. You have 5 minutes to answer as much questions as possible</string>
     <string name="complete">4. You have 40 minutes to answer the 40 questions</string>
     <string name="quick">4. You have 5 minutes to answer the 5 questions</string>
-    <string name="friends">Friends</string>
->>>>>>> master
 </resources>
