@@ -27,7 +27,6 @@ public class menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-
         this.categories = (TextView) findViewById(R.id.categories);
         categories.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +77,8 @@ public class menu extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
 // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_layout, menu);
+        //menu.getItem(0).getSubMenu().setHeaderIcon(R.drawable.lan);
+
         return true;
     }
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -102,6 +103,7 @@ public class menu extends AppCompatActivity {
 
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
+
                 Fragment frag = null; // create a Fragment Object
                 int itemId = menuItem.getItemId(); // get selected menu item's id
                 // check selected menu item's id and replace a Fragment Accordingly
@@ -112,6 +114,9 @@ public class menu extends AppCompatActivity {
                 } else if (itemId == R.id.third) {
                     frag = new ThirdFragment();
                 }
+                //else if (itemId == R.id.cinquo) {
+
+                //}
                 // display a toast message with menu item's title
                 Toast.makeText(getApplicationContext(), menuItem.getTitle(), Toast.LENGTH_SHORT).show();
                 if (frag != null) {
