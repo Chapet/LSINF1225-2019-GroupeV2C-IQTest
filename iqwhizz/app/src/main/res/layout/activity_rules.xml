@@ -29,24 +29,11 @@
 
 
                 <TextView
-                    android:id="@+id/rules"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/math"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/titletop"
-                    android:layout_marginBottom="@dimen/bott"
-                    android:gravity="center"
-                    android:text="@string/Rules"
-                    android:textColor="@color/ecriture"
-                    android:textSize="@dimen/text"
-                    android:textStyle="bold"
-                    android:typeface="serif" />
-
-                <TextView
-                    android:id="@+id/math"
-                    android:layout_width="280dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_marginBottom="@dimen/bott"
                     android:gravity="center"
                     android:text="@string/rule_1"
@@ -55,7 +42,7 @@
 
                 <TextView
                     android:id="@+id/memory"
-                    android:layout_width="280dp"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="@dimen/bott"
@@ -66,7 +53,7 @@
 
                 <TextView
                     android:id="@+id/spatial"
-                    android:layout_width="280dp"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginBottom="@dimen/bott"
@@ -75,12 +62,22 @@
                     android:textColor="@color/blanc"
                     android:textSize="@dimen/text" />
 
+                <TextView
+                    android:id="@+id/time3"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/bott"
+                    android:gravity="center"
+                    android:text="@string/complete"
+                    android:textColor="@color/blanc"
+                    android:textSize="@dimen/text" />
+
                 <Button
                     android:id="@+id/go"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/boutonctopbot"
                     android:text="@string/go"
                     android:textColor="@color/ecriture"
                     android:textSize="@dimen/bouton" />

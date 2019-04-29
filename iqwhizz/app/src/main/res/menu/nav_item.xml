@@ -7,15 +7,35 @@
         -->
         <item
             android:id="@+id/first"
-            android:icon="@drawable/logobon"
-            android:title="@string/first_menu" />
+            android:icon="@drawable/add_friend"
+            android:title="@string/add_a_friend" />
         <item
             android:id="@+id/second"
-            android:icon="@drawable/logobon"
-            android:title="@string/second_menu" />
+            android:icon="@drawable/amis"
+            android:title="@string/friends" />
         <item
             android:id="@+id/third"
-            android:icon="@drawable/logobon"
-            android:title="@string/third_menu" />
+            android:icon="@drawable/podium_bg"
+            android:title="@string/ranking" />
+        <item
+            android:id="@+id/cinquo"
+            android:icon="@drawable/sond"
+            android:title="@string/sound" />
+        <item
+            android:id="@+id/seix"
+            android:icon="@drawable/amis"
+            android:title="@string/my_profil"/>
+        <item android:id="@+id/quatro"
+            android:title="@string/language"
+            android:icon="@drawable/lan">
+
+            <menu android:id="@+id/sousmenu">
+                <item android:id="@+id/fran"
+                    android:title="@string/francais" />
+
+                <item android:id="@+id/ang"
+                    android:title="@string/english" />
+            </menu>
+        </item>
     </group>
 </menu>
