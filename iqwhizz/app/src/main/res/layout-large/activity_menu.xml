@@ -32,7 +32,7 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-    
+
                     <TextView
                         android:id="@+id/completetest"
                         android:layout_width="wrap_content"
@@ -40,18 +40,18 @@
                         android:textColor="@color/ecriture"
                         android:textStyle="bold"
                         android:typeface="serif"
-                        android:layout_marginTop="@dimen/titletop"
+                        android:layout_marginTop="100dp"
                         android:layout_gravity="center"
                         android:text="@string/choose_totaltest"
-                        android:textSize="@dimen/text" />
+                        android:textSize="28sp" />
 
                     <TextView
                         android:id="@+id/textView7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/subtext"
+                        android:textSize="18sp"
                         android:textColor="@color/ecriture"
-                        android:layout_marginBottom="@dimen/bott"
+                        android:layout_marginBottom="55dp"
                         android:layout_gravity="center"
                         android:text="@string/_40_minutes_test" />
 
@@ -64,14 +64,14 @@
                         android:typeface="serif"
                         android:textColor="@color/ecriture"
                         android:text="@string/choose_quicktest"
-                        android:textSize="@dimen/text" />
+                        android:textSize="28sp" />
 
                     <TextView
                         android:id="@+id/textView8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/subtext"
-                        android:layout_marginBottom="@dimen/bott"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="55dp"
                         android:layout_gravity="center"
                         android:textColor="@color/ecriture"
                         android:text="@string/_5_minutes_test" />
@@ -85,16 +85,16 @@
                         android:typeface="serif"
                         android:textStyle="bold"
                         android:text="@string/choose_flashtest"
-                        android:textSize="@dimen/text" />
+                        android:textSize="28sp" />
 
                     <TextView
                         android:id="@+id/textView10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textSize="@dimen/subtext"
+                        android:textSize="18sp"
                         android:textColor="@color/ecriture"
-                        android:layout_marginBottom="@dimen/bott"
+                        android:layout_marginBottom="55dp"
                         android:text="@string/it_tests_your_rapidity" />
 
 
@@ -107,7 +107,7 @@
                         android:typeface="serif"
                         android:text="@string/choose_categories"
                         android:textColor="@color/ecriture"
-                        android:textSize="@dimen/text" />
+                        android:textSize="28sp" />
 
                     <TextView
                         android:id="@+id/textView11"
@@ -115,8 +115,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:textColor="@color/ecriture"
-                        android:textSize="@dimen/subtext"
-                        android:layout_marginBottom="@dimen/bott"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="55dp"
                         android:text="@string/choose_your_categorie_to_train_your_brain" />
 
                     <TextView
@@ -128,7 +128,7 @@
                         android:textColor="@color/ecriture"
                         android:typeface="serif"
                         android:textStyle="bold"
-                        android:textSize="@dimen/text" />
+                        android:textSize="28sp" />
 
 
                     <TextView
@@ -136,8 +136,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginBottom="30dp"
-                        android:textSize="@dimen/subtext"
+                        android:layout_marginBottom="60dp"
+                        android:textSize="18sp"
                         android:textColor="@color/ecriture"
                         android:text="@string/check_your_score" />
 

@@ -7,12 +7,10 @@
     android:layout_gravity="left"
     android:background="@drawable/background"
     android:fitsSystemWindows="true">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
         <!-- include your toolbar layout-->
         <include layout="@layout/toolbar"/>
 
@@ -32,114 +30,98 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-    
+
                     <TextView
-                        android:id="@+id/completetest"
+                        android:id="@+id/logical"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/ecriture"
                         android:textStyle="bold"
                         android:typeface="serif"
-                        android:layout_marginTop="@dimen/titletop"
                         android:layout_gravity="center"
-                        android:text="@string/choose_totaltest"
-                        android:textSize="@dimen/text" />
-
-                    <TextView
-                        android:id="@+id/textView7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="@dimen/subtext"
+                        android:gravity="center"
+                        android:layout_marginTop="100dp"
+                        android:layout_marginBottom="55dp"
+                        android:text="@string/logicaltest"
                         android:textColor="@color/ecriture"
-                        android:layout_marginBottom="@dimen/bott"
-                        android:layout_gravity="center"
-                        android:text="@string/_40_minutes_test" />
+                        android:textSize="28sp" />
 
                     <TextView
-                        android:id="@+id/quicktest"
+                        android:id="@+id/math"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:gravity="center"
                         android:textStyle="bold"
                         android:typeface="serif"
-                        android:textColor="@color/ecriture"
-                        android:text="@string/choose_quicktest"
-                        android:textSize="@dimen/text" />
+                        android:textSize="28sp"
+                        android:layout_marginBottom="55dp"
+                        android:text="@string/mathtest"
+                        android:textColor="@color/ecriture" />
 
                     <TextView
-                        android:id="@+id/textView8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="@dimen/subtext"
-                        android:layout_marginBottom="@dimen/bott"
-                        android:layout_gravity="center"
-                        android:textColor="@color/ecriture"
-                        android:text="@string/_5_minutes_test" />
-
-                    <TextView
-                        android:id="@+id/flashtest"
+                        android:id="@+id/memory"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textColor="@color/ecriture"
-                        android:typeface="serif"
-                        android:textStyle="bold"
-                        android:text="@string/choose_flashtest"
-                        android:textSize="@dimen/text" />
-
-                    <TextView
-                        android:id="@+id/textView10"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:textSize="@dimen/subtext"
-                        android:textColor="@color/ecriture"
-                        android:layout_marginBottom="@dimen/bott"
-                        android:text="@string/it_tests_your_rapidity" />
-
-
-                    <TextView
-                        android:id="@+id/categories"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:gravity="center"
                         android:textStyle="bold"
                         android:typeface="serif"
-                        android:text="@string/choose_categories"
-                        android:textColor="@color/ecriture"
-                        android:textSize="@dimen/text" />
+                        android:textSize="28sp"
+                        android:layout_marginBottom="55dp"
+                        android:text="@string/memorytest"
+                        android:textColor="@color/ecriture" />
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/spatial"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textColor="@color/ecriture"
-                        android:textSize="@dimen/subtext"
-                        android:layout_marginBottom="@dimen/bott"
-                        android:text="@string/choose_your_categorie_to_train_your_brain" />
-
-                    <TextView
-                        android:id="@+id/myscores"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="@string/choose_myscores"
-                        android:textColor="@color/ecriture"
-                        android:typeface="serif"
+                        android:gravity="center"
                         android:textStyle="bold"
-                        android:textSize="@dimen/text" />
-
+                        android:typeface="serif"
+                        android:textSize="28sp"
+                        android:layout_marginBottom="55dp"
+                        android:text="@string/spatialtest"
+                        android:textColor="@color/ecriture"
+                        />
 
                     <TextView
-                        android:id="@+id/textView12"
+                        android:id="@+id/mental"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginBottom="30dp"
-                        android:textSize="@dimen/subtext"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:typeface="serif"
+                        android:textSize="28sp"
+                        android:layout_marginBottom="55dp"
+                        android:text="@string/mentalarith"
+                        android:textColor="@color/ecriture" />
+
+
+                    <TextView
+                        android:id="@+id/paper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:typeface="serif"
+                        android:textSize="28sp"
+                        android:layout_marginBottom="55dp"
+                        android:text="@string/paperfold"
+                        android:textColor="@color/ecriture" />
+
+                    <TextView
+                        android:id="@+id/textentree"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/practice_different_categories_to_improve_your_iq_results_or_for_healty_brain_training"
                         android:textColor="@color/ecriture"
-                        android:text="@string/check_your_score" />
+                        android:layout_marginBottom="60dp"
+                        android:textSize="18sp" />
 
                 </LinearLayout>
             </ScrollView>
