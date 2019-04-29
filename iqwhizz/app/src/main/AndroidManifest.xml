@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name="com.example.iqwizz.MyResult"
+            android:label="@string/title_activity_my_result"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".friends"
             android:label="@string/friends"
-            android:parentActivityName=".menu"
-            />
+            android:parentActivityName=".menu" />
         <activity
             android:name=".rulesquick"
             android:label="@string/Rules"
