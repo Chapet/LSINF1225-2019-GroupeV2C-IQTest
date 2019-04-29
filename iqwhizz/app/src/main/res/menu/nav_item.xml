@@ -17,7 +17,14 @@
             android:id="@+id/third"
             android:icon="@drawable/podium_bg"
             android:title="@string/ranking" />
-
+        <item
+            android:id="@+id/cinquo"
+            android:icon="@drawable/sond"
+            android:title="@string/sound" />
+        <item
+            android:id="@+id/seix"
+            android:icon="@drawable/amis"
+            android:title="@string/my_profil"/>
         <item android:id="@+id/quatro"
             android:title="@string/language"
             android:icon="@drawable/lan">
@@ -30,9 +37,5 @@
                     android:title="@string/english" />
             </menu>
         </item>
-        <item
-            android:id="@+id/cinquo"
-            android:icon="@drawable/sond"
-            android:title="@string/sound" />
     </group>
 </menu>
