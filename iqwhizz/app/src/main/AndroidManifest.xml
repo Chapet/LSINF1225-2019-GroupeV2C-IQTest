@@ -9,29 +9,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Test"></activity>
         <activity
             android:name=".inscription"
             android:label="inscription"
-            android:parentActivityName=".connexion">
-        </activity>
+            android:parentActivityName=".connexion"></activity>
         <activity
             android:name=".connexion"
-            android:label="connexion">
-        </activity>
+            android:label="connexion"></activity>
         <activity
             android:name=".menu"
             android:label="menu"
-            android:parentActivityName=".connexion">
-        </activity>
+            android:parentActivityName=".connexion"></activity>
         <activity
             android:name=".category"
             android:label="category"
-            android:parentActivityName=".menu">
-        </activity>
-        <activity android:name=".Rules"
+            android:parentActivityName=".menu"></activity>
+        <activity
+            android:name=".Rules"
             android:label="rules"
-            android:parentActivityName=".menu">
-        </activity>
+            android:parentActivityName=".menu"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
