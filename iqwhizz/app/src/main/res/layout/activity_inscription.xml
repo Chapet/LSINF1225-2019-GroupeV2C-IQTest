@@ -22,169 +22,199 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/ScrollView01"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/background"
+                    >
 
-            <!--<TextView
-                android:id="@+id/textView1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sign Up"
-                android:gravity="center"
-                android:layout_weight="1.5"
-                android:textSize="30dp"
-                android:background="@color/colorPrimary"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="HardcodedText" /> -->
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_marginTop="@dimen/titletop"
-                    android:textSize="@dimen/text"
-                    android:textColor="@color/ecriture"
-                    android:textStyle="bold"
-                    android:typeface="serif"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text = "@string/username" />
 
-                <EditText
-                    android:id="@+id/editText1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/text"
-                    android:ems="10"
-                    android:maxLength="15"
-                    android:layout_gravity="center"
-                    android:hint="@string/type_your_username"/>
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_marginTop="20dp"
+                        android:textSize="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text = "Username"
+                        android:textColor="@color/ecriture"
+                        android:textStyle="bold"
+                        android:typeface="serif"
+                        />
+                    <EditText
+                        android:id="@+id/editText1"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLength="15"
+                        android:ems="10"
+                        android:hint="Type your username"/>
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="@dimen/subtext"
-                    android:text="@string/please_write_a_correct_username_minimum_3_letter"
-                    android:visibility="invisible"/>
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:textColor="@color/colorAccent"
+                        android:text="Please, write a valid username (minimum 3 characters)"
+                        android:layout_marginLeft="35dp"
+                        android:visibility="invisible"
+                        />
 
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/ecriture"
-                    android:textStyle="bold"
-                    android:typeface="serif"
-                    android:layout_gravity="center"
-                    android:text="@string/mot_de_passe"
-                    android:textSize="@dimen/text" />
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:textSize="20dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Password"
+                        android:textColor="@color/ecriture"
+                        android:textStyle="bold"
+                        android:typeface="serif"/>
 
-                <EditText
-                    android:id="@+id/editText2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:textSize="@dimen/text"
-                    android:layout_marginTop="1dp"
-                    android:ems="10"
-                    android:hint="@string/write_your_password"/>
+                    <EditText
+                        android:id="@+id/editText2"
+                        android:layout_weight="0.25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:hint="Write your password"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:ems="10"
+                        />
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Write a valid password please (6 characters minimum)"
+                        android:visibility="invisible"
+                        android:layout_marginLeft="35dp"
+                        android:textColor="@color/colorAccent"/>
 
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/write_a_password_please"
-                    android:textSize="@dimen/subtext"
-                    android:visibility="invisible"
-                    android:textColor="@color/colorAccent"/>
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Your birthyear"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/ecriture"
+                        android:textStyle="bold"
+                        android:typeface="serif"/>
 
-                <TextView
-                    android:id="@+id/textView6"
-                    android:textSize="@dimen/text"
-                    android:layout_gravity="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:typeface="serif"
-                    android:textColor="@color/ecriture"
-                    android:text="@string/your_birthyear" />
+                    <EditText
+                        android:gravity="center"
+                        android:id="@+id/editText3"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:ems="10"
+                        android:layout_height="wrap_content"
+                        android:hint="Type your birthyear"
+                        android:maxLength="4"
+                        android:inputType="number"
+                        android:layout_weight="0.25" />
 
-                <EditText
-                    android:id="@+id/editText3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:textSize="@dimen/text"
-                    android:ems="10"
-                    android:hint="@string/type_your_birthyear"
-                    android:maxLength="4" />
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Invalid birthyear"
+                        android:visibility="invisible"
+                        android:textColor="@color/colorAccent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="1"/>
 
-                <TextView
-                    android:id="@+id/textView7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/invalid_birthyear"
-                    android:textSize="@dimen/subtext"
-                    android:visibility="invisible"
-                    android:textColor="@color/colorAccent" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Locality"
+                        android:layout_weight="1"
+                        android:textSize="20dp"
+                        android:textColor="@color/ecriture"
+                        android:textStyle="bold"
+                        android:typeface="serif"
+                        />
 
-                <TextView
-                    android:textSize="@dimen/text"
-                    android:layout_gravity="center"
-                    android:textColor="@color/ecriture"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:typeface="serif"
-                    android:textStyle="bold"
-                    android:text="@string/locality" />
+                    <EditText
+                        android:id="@+id/editText4"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:ems="10"
+                        android:layout_height="wrap_content"
+                        android:hint="Type your locality"
+                        android:gravity="center"
+                        android:layout_weight="0.25"/>
 
-                <EditText
-                    android:id="@+id/editText4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:textSize="@dimen/text"
-                    android:ems="10"
-                    android:hint="@string/type_your_locality" />
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Please, write a correct locality"
+                        android:textColor="@color/colorAccent"
+                        android:visibility="invisible"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
 
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:textSize="@dimen/subtext"
-                    android:text="@string/please_write_a_correct_locality"
-                    android:textColor="@color/colorAccent"
-                    android:visibility="invisible" />
+                    <TextView
+                        android:id="@+id/activity_main_avatar"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Choose an avatar please"
+                        android:textColor="@color/ecriture"
+                        android:textStyle="bold"
+                        android:typeface="serif"/>
 
-                <Button
-                    android:id="@+id/button1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/boutonctopbot"
-                    android:textSize="@dimen/bouton"
-                    android:layout_gravity="center"
-                    android:textColor="@color/ecriture"
-                    android:text="@string/sign_up"/>
-            </LinearLayout>
+                    <Button
+                        android:id="@+id/activity_main_button2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:padding="30dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Open gallery"/>
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:id="@+id/image1"
+                        android:layout_gravity="center"
+
+                        />
+
+                    <Button
+                        android:id="@+id/button1"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sign up"
+                        android:background="@color/ecriture"/>
+
+
+
+
+                </LinearLayout>
+            </ScrollView>
         </FrameLayout>
     </LinearLayout>
-    <!--
-         Navigation view to show the menu items
-    -->
-    <android.support.design.widget.NavigationView
-        android:id="@+id/navigation"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="right"
-        app:menu="@menu/nav_item" />
+
 
 </android.support.v4.widget.DrawerLayout>

@@ -1,14 +1,24 @@
 package be.uclouvain.lsinf1225.groupeV2C.iqtest;
 
+
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+
+// Attention, on ne peut pas passer à l'écran suivant en ayant que sélectionner un avatar.
 
 public class inscription extends AppCompatActivity {
 
@@ -17,21 +27,19 @@ public class inscription extends AppCompatActivity {
     private EditText birthyear;
     private EditText locality;
     private Button button;
+    private Button avatarButton;
     private TextView usernameError;
     private TextView passwordError;
     private TextView birthyearError;
     private TextView localityError;
+    private ImageView imageView;
+    private static final int PICK_IMAGE = 100;
+    Uri imageUri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inscription);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar); // get the reference of Toolbar
-        setSupportActionBar(toolbar); // Setting/replace toolbar as the ActionBar
-        toolbar.setTitle(getResources().getString(R.string.sign_up));
-        toolbar.setNavigationIcon(R.drawable.retour);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        // implement setNavigationOnClickListener event
+        setContentView(R.layout.activity_main);
         username = findViewById(R.id.editText1);
         password = findViewById(R.id.editText2);
         birthyear = findViewById(R.id.editText3);
@@ -41,6 +49,17 @@ public class inscription extends AppCompatActivity {
         passwordError = findViewById(R.id.textView5);
         birthyearError = findViewById(R.id.textView7);
         localityError = findViewById(R.id.textView8);
+        avatarButton = findViewById(R.id.activity_main_button2);
+
+        imageView = findViewById(R.id.image1);
+
+        avatarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openGallery();
+            }
+        });
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,30 +67,32 @@ public class inscription extends AppCompatActivity {
                 int userNameInput = username.getText().length();
                 int passwordInput = password.getText().length();
                 int birthyearInput = birthyear.getText().length();
+                int birthyearNumber = Integer.parseInt(birthyear.getText().toString());
                 int localityInput = locality.getText().length();
-                if(userNameInput < 3 || passwordInput <= 0 || birthyearInput != 4){
-                    if(userNameInput < 3 || localityInput < 3){ //diviser en 2 et ne mettre l'erreur que là ou il y en a une
+                if(userNameInput < 3 || passwordInput < 6 || birthyearInput != 4 || birthyearNumber > 2019 || birthyearNumber < 1920 ||
+                        localityInput < 3){
+                    if(userNameInput < 3){
                         usernameError.setVisibility(View.VISIBLE);
                     }
                     else{
                         usernameError.setVisibility(View.INVISIBLE);
                     }
 
-                    if(passwordInput <=0){ //il faudrait que le mot de passe soit de minimum de longueur 6 ce serait mieux
+                    if(passwordInput < 6){
                         passwordError.setVisibility(View.VISIBLE);
                     }
                     else{
                         passwordError.setVisibility(View.INVISIBLE);
                     }
 
-                    if(birthyearInput != 4){  //si c'est plus grand que 2019 aussi (ou que today pour generaliser)
+                    if(birthyearInput != 4 || birthyearNumber > 2019 || birthyearNumber < 1920){
                         birthyearError.setVisibility(View.VISIBLE);
                     }
                     else{
                         birthyearError.setVisibility(View.INVISIBLE);
                     }
 
-                    if(localityInput <= 4){ //pq pas une selection de pays mais ca c est si on a le time
+                    if(localityInput < 3){
                         localityError.setVisibility(View.VISIBLE);
                     }
                     else{
@@ -79,14 +100,39 @@ public class inscription extends AppCompatActivity {
                     }
                 }
                 else{
+                    // new User(username.getText(), Integer.parseInt(birthyear.getText()), locality.getText())
                     openActivity2();
                 }
             }
         });
+
     }
+    private void openGallery(){
+        Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+        startActivityForResult(gallery, PICK_IMAGE);
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode,resultCode,data);
+        if(resultCode == RESULT_OK && requestCode == PICK_IMAGE){
+            imageUri = data.getData();
+
+            InputStream inputStream;
+            try {
+                inputStream =  getContentResolver().openInputStream(imageUri);
+                Bitmap image = BitmapFactory.decodeStream(inputStream);
+                imageView.setImageBitmap(image);
+
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+                Toast.makeText(this, "Unable to open image", Toast.LENGTH_LONG).show();
+            }
+            imageView.setImageURI(imageUri);
+        }
+    }
+
     public void openActivity2(){
         Intent intent = new Intent(this, menu.class);
         startActivity(intent);
-        finish();
     }
 }
