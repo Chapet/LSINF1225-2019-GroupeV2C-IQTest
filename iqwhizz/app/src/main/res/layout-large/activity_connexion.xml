@@ -10,53 +10,53 @@
         android:background="@drawable/background">
 
         <ImageView
-            android:layout_width="@dimen/size_logo"
-            android:layout_height="@dimen/size_logo"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/titlewtop"
+            android:layout_marginTop="130dp"
             android:src="@drawable/logobon" />
-    -->
+
         <EditText
             android:id="@+id/editText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/textctop"
             android:layout_gravity="center"
-            android:ems="10"
+            android:ems="12"
             android:inputType="textPersonName"
             android:hint="@string/username"
             android:textColor="@color/ecriture"
-            android:textSize="@dimen/text" />
+            android:textSize="28sp" />
 
         <EditText
             android:id="@+id/editText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:ems="10"
+            android:ems="12"
             android:inputType="textPassword"
             android:hint="@string/send_password"
             android:textColor="@color/ecriture"
-            android:textSize="@dimen/text" />
+            android:textSize="28sp" />
 
         <Button
             android:id="@+id/men"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/boutonctopbot"
-            android:layout_marginBottom="@dimen/boutonctopbot"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:text="@string/connexion_button"
             android:textColor="@color/ecriture"
-            android:textSize="@dimen/bouton" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/boutonctopbot"
-            android:layout_marginBottom="@dimen/boutonctopbot"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:text="Or"
             android:textColor="@color/ecriture"
             android:textSize="@dimen/text"
@@ -67,12 +67,12 @@
             android:id="@+id/signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/boutonctopbot"
+            android:layout_marginTop="20dp"
             android:layout_gravity="center"
             android:text="@string/signup_button"
             android:textColor="@color/ecriture"
-            android:layout_marginBottom="30dp"
-            android:textSize="@dimen/bouton" />
+            android:layout_marginBottom="60dp"
+            android:textSize="18sp" />
 
     </LinearLayout>
 </ScrollView>

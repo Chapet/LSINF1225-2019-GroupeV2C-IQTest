@@ -35,67 +35,68 @@
                         android:id="@+id/logical"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:typeface="serif"
                         android:layout_gravity="center"
+                        android:gravity="center"
                         android:layout_marginTop="@dimen/titletop"
                         android:layout_marginBottom="@dimen/bott"
-                        android:gravity="center"
                         android:text="@string/logicaltest"
                         android:textColor="@color/ecriture"
-                        android:textSize="@dimen/text"
-                        android:textStyle="bold"
-                        android:typeface="serif" />
+                        android:textSize="@dimen/text" />
 
                     <TextView
                         android:id="@+id/math"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginBottom="@dimen/bott"
                         android:gravity="center"
-                        android:text="@string/mathtest"
-                        android:textColor="@color/ecriture"
-                        android:textSize="@dimen/text"
                         android:textStyle="bold"
-                        android:typeface="serif" />
+                        android:typeface="serif"
+                        android:textSize="@dimen/text"
+                        android:layout_marginBottom="@dimen/bott"
+                        android:text="@string/mathtest"
+                        android:textColor="@color/ecriture" />
 
                     <TextView
                         android:id="@+id/memory"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginBottom="@dimen/bott"
                         android:gravity="center"
-                        android:text="@string/memorytest"
-                        android:textColor="@color/ecriture"
-                        android:textSize="@dimen/text"
                         android:textStyle="bold"
-                        android:typeface="serif" />
+                        android:typeface="serif"
+                        android:textSize="@dimen/text"
+                        android:layout_marginBottom="@dimen/bott"
+                        android:text="@string/memorytest"
+                        android:textColor="@color/ecriture" />
 
                     <TextView
                         android:id="@+id/spatial"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginBottom="@dimen/bott"
                         android:gravity="center"
+                        android:textStyle="bold"
+                        android:typeface="serif"
+                        android:textSize="@dimen/text"
+                        android:layout_marginBottom="@dimen/bott"
                         android:text="@string/spatialtest"
                         android:textColor="@color/ecriture"
-                        android:textSize="@dimen/text"
-                        android:textStyle="bold"
-                        android:typeface="serif" />
+                        />
 
                     <TextView
                         android:id="@+id/mental"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginBottom="@dimen/bott"
                         android:gravity="center"
-                        android:text="@string/mentalarith"
-                        android:textColor="@color/ecriture"
-                        android:textSize="@dimen/text"
                         android:textStyle="bold"
-                        android:typeface="serif" />
+                        android:typeface="serif"
+                        android:textSize="@dimen/text"
+                        android:layout_marginBottom="@dimen/bott"
+                        android:text="@string/mentalarith"
+                        android:textColor="@color/ecriture" />
 
 
                     <TextView
@@ -103,24 +104,24 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginBottom="@dimen/bott"
                         android:gravity="center"
-                        android:text="@string/paperfold"
-                        android:textColor="@color/ecriture"
-                        android:textSize="@dimen/text"
                         android:textStyle="bold"
-                        android:typeface="serif" />
+                        android:typeface="serif"
+                        android:textSize="@dimen/text"
+                        android:layout_marginBottom="@dimen/bott"
+                        android:text="@string/paperfold"
+                        android:textColor="@color/ecriture" />
 
                     <TextView
                         android:id="@+id/textentree"
                         android:layout_width="280dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="@dimen/bott"
                         android:gravity="center"
+                        android:layout_marginTop="@dimen/bott"
                         android:text="@string/practice_different_categories_to_improve_your_iq_results_or_for_healty_brain_training"
                         android:textColor="@color/ecriture"
-                        android:layout_marginBottom="31dp"
+                        android:layout_marginBottom="30dp"
                         android:textSize="@dimen/subtext" />
 
                 </LinearLayout>
@@ -138,4 +139,3 @@
         app:menu="@menu/nav_item" />
 
 </android.support.v4.widget.DrawerLayout>
-

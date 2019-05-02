@@ -29,5 +29,5 @@ public class Test extends AppCompatActivity {
             throw mSQLException;
         }
     }
-    
+
 }
