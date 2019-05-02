@@ -5,7 +5,7 @@
     <dimen name="imwtop">170dp</dimen>
     <dimen name="imwbott">238dp</dimen>
     <dimen name="titlewsize">40sp</dimen>
-    <dimen name="titlewtop">100dp</dimen>
+    <dimen name="titlewtop">90dp</dimen>
 
     <!--MEPconnexion-->
     <dimen name="textctop">32dp</dimen> <!--entre une image et du texte-->

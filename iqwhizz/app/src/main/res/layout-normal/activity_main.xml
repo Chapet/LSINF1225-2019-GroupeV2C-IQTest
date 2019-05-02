@@ -41,9 +41,9 @@
             android:text="@string/tap_to_continue"
             android:typeface="serif"
             android:textSize="@dimen/text"
+            android:layout_marginBottom="30dp"
             android:layout_gravity="center"
             android:layout_marginTop="100dp"
-            android:layout_marginBottom="30dp"
             android:textColor="@color/ecriture" />
 
 
