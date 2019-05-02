@@ -120,7 +120,7 @@
                         android:gravity="center"
                         android:text="@string/practice_different_categories_to_improve_your_iq_results_or_for_healty_brain_training"
                         android:textColor="@color/ecriture"
-                        android:layout_marginBottom="30dp"
+                        android:layout_marginBottom="31dp"
                         android:textSize="@dimen/subtext" />
 
                 </LinearLayout>
