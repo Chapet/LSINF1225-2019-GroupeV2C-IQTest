@@ -39,7 +39,7 @@ public class inscription extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_inscription);
         username = findViewById(R.id.editText1);
         password = findViewById(R.id.editText2);
         birthyear = findViewById(R.id.editText3);

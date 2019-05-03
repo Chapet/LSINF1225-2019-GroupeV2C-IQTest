@@ -114,7 +114,9 @@ public class menu extends AppCompatActivity {
                 } else if (itemId == R.id.third) {
                     frag = new ThirdFragment();
                 }
-                else if (itemId == R.id.cinquo) {
+                else if (itemId == R.id.seix) {
+                    Intent signup = new Intent(getApplicationContext(), inscription.class);
+                    startActivity(signup);
                 }
                 // display a toast message with menu item's title
                 Toast.makeText(getApplicationContext(), menuItem.getTitle(), Toast.LENGTH_SHORT).show();
