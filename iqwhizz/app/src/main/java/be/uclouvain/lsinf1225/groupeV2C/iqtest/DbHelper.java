@@ -20,10 +20,11 @@ public class DbHelper extends SQLiteOpenHelper
     private static String DB_NAME ="StartingDatabase.db";// Database name
     private SQLiteDatabase mDataBase;
     private final Context mContext;
+    private boolean mNeedUpdate = false;
 
     public DbHelper(Context context)
     {
-        super(context, DB_NAME, null, 1);// 1? Its database Version
+        super(context, DB_NAME, null, 1);
         if(android.os.Build.VERSION.SDK_INT >= 17){
             DB_PATH = context.getApplicationInfo().dataDir + "/databases/";
         }
@@ -45,7 +46,7 @@ public class DbHelper extends SQLiteOpenHelper
             this.close();
             try
             {
-                //Copy the database from assests
+                //Copy the database from assets
                 copyDataBase();
                 Log.e(TAG, "createDatabase database created");
             }
@@ -56,7 +57,7 @@ public class DbHelper extends SQLiteOpenHelper
         }
     }
 
-    //Check that the database exists here: /data/data/your package/databases/Da Name
+    //Check that the database exists here: /data/data/your package/databases/DbName
     private boolean checkDataBase()
     {
         File dbFile = new File(DB_PATH + DB_NAME);
@@ -97,5 +98,16 @@ public class DbHelper extends SQLiteOpenHelper
         if(mDataBase != null)
             mDataBase.close();
         super.close();
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        if (newVersion > oldVersion)
+            mNeedUpdate = true;
     }
 }
