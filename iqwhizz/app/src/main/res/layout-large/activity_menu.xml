@@ -153,6 +153,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="right"
+        app:headerLayout="@layout/header"
         app:menu="@menu/nav_item" />
 
 </android.support.v4.widget.DrawerLayout>

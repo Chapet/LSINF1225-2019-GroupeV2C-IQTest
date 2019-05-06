@@ -108,11 +108,14 @@ public class menu extends AppCompatActivity {
                 int itemId = menuItem.getItemId(); // get selected menu item's id
                 // check selected menu item's id and replace a Fragment Accordingly
                 if (itemId == R.id.first) {
-                    frag = new FirstFragment();
+                    Intent addfriend = new Intent(getApplicationContext(), addfriend.class);
+                    startActivity(addfriend);
                 } else if (itemId == R.id.second) {
-                    frag = new SecondFragment();
+                    Intent friend = new Intent(getApplicationContext(), friends.class);
+                    startActivity(friend);
                 } else if (itemId == R.id.third) {
-                    frag = new ThirdFragment();
+                    Intent ranking = new Intent(getApplicationContext(), ranking.class);
+                    startActivity(ranking);
                 }
                 else if (itemId == R.id.seix) {
                     Intent signup = new Intent(getApplicationContext(), inscription.class);
