@@ -18,7 +18,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ring= MediaPlayer.create(MainActivity.this,R.raw.cigale);
         ring.start();
+
         this.tapbut = (TextView) findViewById(R.id.tap);
+
         tapbut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -27,5 +29,18 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
     }
+
+    /*private String display(){
+        Test mDbHelper = new Test(getBaseContext());
+        mDbHelper.createDatabase();
+        mDbHelper.open();
+
+        Cursor testdata = mDbHelper.getTestData();
+
+        mDbHelper.close();
+
+        return testdata.getString(testdata .getPosition());
+    }*/
 }
