@@ -35,6 +35,7 @@ public class rulesquick extends AppCompatActivity {
             public void onClick(View v) {
                 Intent quest = new Intent(getApplicationContext(), Question5.class);
                 startActivity(quest);
+                finish();
             }
         });
     }

@@ -33,6 +33,7 @@ public class Rules extends AppCompatActivity {
             public void onClick(View v) {
                 Intent quest = new Intent(getApplicationContext(), Questions.class);
                 startActivity(quest);
+                finish();
             }
             });
 
