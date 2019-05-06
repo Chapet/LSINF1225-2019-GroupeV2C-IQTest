@@ -1,0 +1,14 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- View background color -->
+    <solid
+        android:color="@color/blanc" >
+    </solid>
+
+    <!-- View border color and width -->
+    <stroke
+        android:width="10dp"
+        android:color="@color/blanc" >
+    </stroke>
+</shape>

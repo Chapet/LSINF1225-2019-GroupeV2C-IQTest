@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="be.uclouvain.lsinf1225.groupeV2C.iqtest">
-    <!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/> -->
-
+    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/> -->
     <supports-screens
         android:largeScreens="true"
         android:normalScreens="true"
@@ -15,7 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".profil"></activity>
+        <activity android:name=".Questions"></activity>
+        <activity android:name=".ranking" />
+        <activity android:name=".addfriend" />
+        <activity android:name=".profil" />
         <activity
             android:name=".friends"
             android:label="@string/friends"
