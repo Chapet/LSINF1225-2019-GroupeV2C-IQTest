@@ -14,41 +14,70 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Questions"></activity>
-        <activity android:name=".ranking" />
-        <activity android:name=".addfriend" />
-        <activity android:name=".profil" />
+        <activity
+            android:name=".Question5"
+            android:label="Questions"
+            android:parentActivityName=".menu"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Questions"
+            android:label="Questions"
+            android:parentActivityName=".menu"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ranking"
+            android:label="Ranking"
+            android:parentActivityName=".menu"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".addfriend"
+            android:label="Add friends"
+            android:parentActivityName=".menu"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".profil"
+            android:label="Profile"
+            android:parentActivityName=".menu"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".friends"
             android:label="@string/friends"
-            android:parentActivityName=".menu" />
+            android:parentActivityName=".menu"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".rulesquick"
             android:label="@string/Rules"
-            android:parentActivityName=".menu" />
+            android:parentActivityName=".menu"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".rulesflash"
             android:label="@string/Rules"
-            android:parentActivityName=".menu" />
+            android:parentActivityName=".menu"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".inscription"
             android:label="Inscription"
-            android:parentActivityName=".connexion" />
+            android:parentActivityName=".connexion"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".connexion"
-            android:label="Connexion" />
+            android:label="Connexion"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".menu"
             android:label="Menu"
-            android:parentActivityName=".connexion" />
+            android:parentActivityName=".connexion"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".category"
             android:label="category"
-            android:parentActivityName=".menu" />
+            android:parentActivityName=".menu"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Rules"
             android:label="Rules"
-            android:parentActivityName=".menu" />
+            android:parentActivityName=".menu"
+            android:screenOrientation="portrait"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

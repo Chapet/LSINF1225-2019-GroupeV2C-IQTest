@@ -1,5 +1,6 @@
 package be.uclouvain.lsinf1225.groupeV2C.iqtest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -11,10 +12,13 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class rulesquick extends AppCompatActivity {
-    DrawerLayout dLayout;
+
+    Button Go;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,56 +28,15 @@ public class rulesquick extends AppCompatActivity {
         toolbar.setTitle(getResources().getString(R.string.Rules));
         toolbar.setNavigationIcon(R.drawable.retour);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        setNavigationDrawer(); // call method
-    }
-    public boolean onCreateOptionsMenu(Menu menu) {
-// Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_layout, menu);
-        return true;
-    }
-    public boolean onOptionsItemSelected(MenuItem item) {
-// Handle action bar item clicks here. The action bar will
-// automatically handle clicks on the Home/Up button, so long
-// as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-//noinspection SimplifiableIfStatement
-// Display menu item's title by using a Toast.
-        if (id == R.id.action_settings) {
-            dLayout.openDrawer(Gravity.RIGHT);
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
-    private void setNavigationDrawer() {
-        dLayout = (DrawerLayout) findViewById(R.id.drawer_layout); // initiate a DrawerLayout
-        NavigationView navView = (NavigationView) findViewById(R.id.navigation); // initiate a Navigation View
-        // implement setNavigationItemSelectedListener event on NavigationView
-        navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-
+        this.Go= (Button) findViewById(R.id.go);
+        Go.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onNavigationItemSelected(MenuItem menuItem) {
-                Fragment frag = null; // create a Fragment Object
-                int itemId = menuItem.getItemId(); // get selected menu item's id
-                // check selected menu item's id and replace a Fragment Accordingly
-                if (itemId == R.id.first) {
-                    frag = new FirstFragment();
-                } else if (itemId == R.id.second) {
-                    frag = new SecondFragment();
-                } else if (itemId == R.id.third) {
-                    frag = new ThirdFragment();
-                }
-                // display a toast message with menu item's title
-                Toast.makeText(getApplicationContext(), menuItem.getTitle(), Toast.LENGTH_SHORT).show();
-                if (frag != null) {
-                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                    transaction.replace(R.id.frame, frag); // replace a Fragment with Frame Layout
-                    transaction.commit(); // commit the changes
-                    dLayout.closeDrawers(); // close the all open Drawer Views
-                    return true;
-                }
-                return false;
+            public void onClick(View v) {
+                Intent quest = new Intent(getApplicationContext(), Question5.class);
+                startActivity(quest);
             }
         });
     }
+
 }
