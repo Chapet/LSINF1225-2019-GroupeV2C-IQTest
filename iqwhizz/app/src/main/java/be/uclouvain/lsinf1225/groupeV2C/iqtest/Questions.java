@@ -5,12 +5,15 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class Questions extends AppCompatActivity {
     public TextView countDowntxt;
     public CountDownTimer countDownTimer;
     private long timeleftms=2400000;
+    Button result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +25,15 @@ public class Questions extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         countDowntxt=(TextView)findViewById(R.id.time);
         startTimer();
+        result=(Button) findViewById(R.id.button);
+        result.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent resultat = new Intent(getApplicationContext(), Result_quizz.class);
+                startActivity(resultat);
+                finish();
+            }
+        });
     }
     public void startTimer(){
         countDownTimer=new CountDownTimer(timeleftms,1000) {
