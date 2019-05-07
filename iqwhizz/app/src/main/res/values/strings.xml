@@ -114,4 +114,7 @@
     <string name="r_ponse_9">Answer 9</string>
     <string name="my_profil">My profile</string>
     <string name="see_my_mistakes">see My mistakes</string>
+    <string name="your_score_is">Your score is :</string>
+    <string name="your_iq_is">Your IQ is :</string>
+    <string name="score">score</string>
 </resources>

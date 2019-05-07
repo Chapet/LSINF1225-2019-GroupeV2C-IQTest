@@ -1,15 +1,19 @@
 package be.uclouvain.lsinf1225.groupeV2C.iqtest;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
 public class Result_quizz extends AppCompatActivity {
     TextView score;
     TextView QI;
+    Button seem;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,5 +27,14 @@ public class Result_quizz extends AppCompatActivity {
         QI=(TextView) findViewById(R.id.QI);
         score.setText("35/40");
         QI.setText("120 DE QI");
+
+        this.seem = (Button) findViewById(R.id.see_mistakes);
+        seem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent seem = new Intent(getApplicationContext(), see_my_mistakes.class);
+                startActivity(seem);
+            }
+        });
     }
 }
