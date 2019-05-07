@@ -117,4 +117,5 @@
     <string name="your_score_is">Your score is :</string>
     <string name="your_iq_is">Your IQ is :</string>
     <string name="score">score</string>
+    <string name="your_best_iq_is">Your best IQ is :</string>
 </resources>
