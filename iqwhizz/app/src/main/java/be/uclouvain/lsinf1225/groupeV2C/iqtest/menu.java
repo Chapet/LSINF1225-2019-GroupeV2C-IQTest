@@ -21,6 +21,7 @@ public class menu extends AppCompatActivity {
     private TextView completetest;
     private TextView quicktest;
     private TextView flashtest;
+    private TextView Myresult;
     DrawerLayout dLayout;
 
     @Override
@@ -60,6 +61,14 @@ public class menu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent flash = new Intent(getApplicationContext(), rulesflash.class);
                 startActivity(flash);
+            }
+        });
+        this.Myresult = (TextView) findViewById(R.id.myscores);
+        Myresult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent score = new Intent(getApplicationContext(), My_Result.class);
+                startActivity(score);
             }
         });
 

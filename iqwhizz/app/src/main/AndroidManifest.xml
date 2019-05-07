@@ -14,7 +14,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Result_quizz"></activity>
+        <activity android:name=".My_Result"></activity>
+        <activity
+            android:name=".Result_quizz"
+            android:label="Result"
+            android:parentActivityName=".menu"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Question5"
             android:label="Questions"
