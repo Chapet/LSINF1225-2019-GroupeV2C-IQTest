@@ -24,7 +24,7 @@
         <item
             android:id="@+id/seix"
             android:icon="@drawable/amis"
-            android:title="@string/my_profil"/>
+            android:title="@string/My_profil"/>
         <item android:id="@+id/quatro"
             android:title="@string/language"
             android:icon="@drawable/lan">
