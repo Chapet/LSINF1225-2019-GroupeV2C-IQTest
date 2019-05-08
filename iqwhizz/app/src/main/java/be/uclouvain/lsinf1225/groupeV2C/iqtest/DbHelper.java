@@ -110,4 +110,5 @@ public class DbHelper extends SQLiteOpenHelper
         if (newVersion > oldVersion)
             mNeedUpdate = true;
     }
+
 }
