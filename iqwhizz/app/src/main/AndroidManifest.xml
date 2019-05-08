@@ -8,6 +8,7 @@
         android:smallScreens="true" />
 
     <application
+        android:name="IQWhizzApplication"
         android:allowBackup="true"
         android:icon="@drawable/logorond"
         android:label="@string/app_name"
