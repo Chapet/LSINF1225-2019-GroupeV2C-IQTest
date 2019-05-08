@@ -69,15 +69,6 @@
                             android:textSize="@dimen/bouton" />
                     </LinearLayout>
 
-                    <Button
-                        android:id="@+id/cancel"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/boutonctopbot"
-                        android:layout_marginBottom="@dimen/boutonctopbot"
-                        android:text="@string/cancel"
-                        android:textColor="@color/ecriture"
-                        android:textSize="@dimen/bouton" />
 
 
             </LinearLayout>
