@@ -1,5 +1,8 @@
 package be.uclouvain.lsinf1225.groupeV2C.iqtest;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -11,7 +14,10 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
+
+
 
 public class Rules extends AppCompatActivity {
     DrawerLayout dLayout;
@@ -19,6 +25,11 @@ public class Rules extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules);
+
+        TextView tv13 = (TextView) findViewById(R.id.tV13);
+        tv13.setText("yaou");
+        System.out.println(DatabaseHelper.getUserList());
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar); // get the reference of Toolbar
         setSupportActionBar(toolbar); // Setting/replace toolbar as the ActionBar
         toolbar.setTitle(getResources().getString(R.string.Rules));

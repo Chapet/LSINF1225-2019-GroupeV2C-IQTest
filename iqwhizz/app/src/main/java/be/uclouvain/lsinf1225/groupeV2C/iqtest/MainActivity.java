@@ -31,16 +31,4 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-    /*private String display(){
-        Test mDbHelper = new Test(getBaseContext());
-        mDbHelper.createDatabase();
-        mDbHelper.open();
-
-        Cursor testdata = mDbHelper.getTestData();
-
-        mDbHelper.close();
-
-        return testdata.getString(testdata .getPosition());
-    }*/
 }
