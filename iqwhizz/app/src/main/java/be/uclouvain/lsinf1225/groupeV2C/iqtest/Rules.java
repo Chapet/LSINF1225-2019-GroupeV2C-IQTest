@@ -16,12 +16,19 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+
 public class Rules extends AppCompatActivity {
     Button Go;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules);
+
+        TextView tv13 = (TextView) findViewById(R.id.tV13);
+        tv13.setText("yaou");
+        System.out.println(DatabaseHelper.getUserList());
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar); // get the reference of Toolbar
         setSupportActionBar(toolbar); // Setting/replace toolbar as the ActionBar
         toolbar.setTitle(getResources().getString(R.string.Rules));

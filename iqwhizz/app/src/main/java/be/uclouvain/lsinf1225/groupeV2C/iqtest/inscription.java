@@ -1,6 +1,7 @@
 package be.uclouvain.lsinf1225.groupeV2C.iqtest;
 
 
+import android.arch.persistence.room.Room;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.List;
 
 // Attention, on ne peut pas passer à l'écran suivant en ayant que sélectionner un avatar.
 
@@ -38,6 +40,10 @@ public class inscription extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+       final AppDatabase db = Room.databaseBuilder(getApplicationContext(), // creation de la db
+                AppDatabase.class, "production").allowMainThreadQueries().build();
+
+        List<User> users = db.userDao().getAllUsers();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inscription);
         username = findViewById(R.id.editText1);
@@ -100,7 +106,9 @@ public class inscription extends AppCompatActivity {
                     }
                 }
                 else{
-                    // new User(username.getText(), Integer.parseInt(birthyear.getText()), locality.getText())
+                    User user = new User(username.getText().toString(),password.getText().toString(), Integer.parseInt(birthyear.getText().toString()), locality.getText().toString());
+                    db.userDao().insertAll(user);
+
                     openActivity2();
                 }
             }

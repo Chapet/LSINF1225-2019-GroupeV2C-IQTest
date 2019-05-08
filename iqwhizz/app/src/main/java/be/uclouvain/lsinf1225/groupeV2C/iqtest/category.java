@@ -15,7 +15,6 @@ import android.widget.Toast;
 
 public class category extends AppCompatActivity {
 
-    DrawerLayout dLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,59 +26,7 @@ public class category extends AppCompatActivity {
         toolbar.setTitle(getResources().getString(R.string.category));
         toolbar.setNavigationIcon(R.drawable.retour);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        setNavigationDrawer(); // call method
     }
 
-    public boolean onCreateOptionsMenu(Menu menu) {
-// Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_layout, menu);
-        return true;
-    }
-    public boolean onOptionsItemSelected(MenuItem item) {
-// Handle action bar item clicks here. The action bar will
-// automatically handle clicks on the Home/Up button, so long
-// as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-//noinspection SimplifiableIfStatement
-// Display menu item's title by using a Toast.
-        if (id == R.id.action_settings) {
-            dLayout.openDrawer(Gravity.RIGHT);
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    private void setNavigationDrawer() {
-        dLayout = (DrawerLayout) findViewById(R.id.drawer_layout); // initiate a DrawerLayout
-        NavigationView navView = (NavigationView) findViewById(R.id.navigation); // initiate a Navigation View
-        // implement setNavigationItemSelectedListener event on NavigationView
-        navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-
-            @Override
-            public boolean onNavigationItemSelected(MenuItem menuItem) {
-                Fragment frag = null; // create a Fragment Object
-                int itemId = menuItem.getItemId(); // get selected menu item's id
-                // check selected menu item's id and replace a Fragment Accordingly
-                if (itemId == R.id.first) {
-                    frag = new FirstFragment();
-                } else if (itemId == R.id.second) {
-                    frag = new SecondFragment();
-                } else if (itemId == R.id.third) {
-                    frag = new ThirdFragment();
-                }
-                // display a toast message with menu item's title
-                Toast.makeText(getApplicationContext(), menuItem.getTitle(), Toast.LENGTH_SHORT).show();
-                if (frag != null) {
-                    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                    transaction.replace(R.id.frame, frag); // replace a Fragment with Frame Layout
-                    transaction.commit(); // commit the changes
-                    dLayout.closeDrawers(); // close the all open Drawer Views
-                    return true;
-                }
-                return false;
-            }
-        });
-    }
 }
 
