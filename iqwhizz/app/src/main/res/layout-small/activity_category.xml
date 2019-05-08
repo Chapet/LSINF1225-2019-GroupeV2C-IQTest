@@ -120,14 +120,6 @@
             </LinearLayout>
         </FrameLayout>
     </LinearLayout>
-    <!--
-         Navigation view to show the menu items
-    -->
-    <android.support.design.widget.NavigationView
-        android:id="@+id/navigation"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="right"
-        app:menu="@menu/nav_item" />
+
 
 </android.support.v4.widget.DrawerLayout>
