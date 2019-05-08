@@ -134,4 +134,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return ret;
     }
 
+    public static void insertInfoUser(String username, String password, int birthyear, String localite)
+    {
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("INSERT INTO User VALUES(" + username+"," + password + "," + birthyear + "," + localite+")", null);
+
+
+        // INSERT INTO TABLE_NAME VALUES (value1,value2,value3,...valueN);
+    }
+
+    public static int getQuestions() {
+        int ret = 0;
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT * FROM QUESTIONS", null);
+        while (mCur.moveToNext()) {
+            ret = mCur.getColumnCount();
+        }
+        return ret;
+    }
 }
