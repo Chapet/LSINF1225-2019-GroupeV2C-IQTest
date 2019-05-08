@@ -15,7 +15,7 @@
             android:id="@+id/Welcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/titlewtop"
+            android:layout_marginTop="80dp"
             android:text="@string/welcome_to_iq_whizz"
             android:layout_gravity="center"
             android:typeface="serif"

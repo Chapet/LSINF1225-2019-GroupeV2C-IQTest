@@ -38,7 +38,7 @@
 
                     <TextView
                         android:id="@+id/textView2"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="@dimen/titletop"
                         android:textSize="20sp"
                         android:layout_weight="1"
                         android:gravity="center"
@@ -55,6 +55,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="0.25"
                         android:layout_width="wrap_content"
+                        android:textColor="@color/ecriture"
                         android:layout_height="wrap_content"
                         android:maxLength="15"
                         android:ems="10"
@@ -186,10 +187,12 @@
                     <Button
                         android:id="@+id/activity_main_button2"
                         android:layout_width="wrap_content"
-                        android:layout_height="80dp"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:padding="30dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:layout_marginBottom="@dimen/boutonctopbot"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton"
                         android:text="Open gallery"/>
 
                     <ImageView
@@ -202,11 +205,14 @@
 
                     <Button
                         android:id="@+id/button1"
-                        android:layout_weight="1"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Sign up"
-                        android:background="@color/ecriture"/>
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:layout_marginBottom="@dimen/boutonctopbot"
+                        android:text="@string/signup_button"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
 
 
 

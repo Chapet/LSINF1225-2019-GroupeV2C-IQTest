@@ -62,7 +62,7 @@
                             android:layout_marginTop="20dp"
                             android:layout_marginBottom="10dp"
                             android:ems="7"
-                            android:text="Time : 40:00"
+                            android:text="Time : 5:00"
                             android:textColor="@color/ecriture"
                             android:textSize="@dimen/subtext"
                             android:textStyle="bold"
@@ -74,11 +74,11 @@
 
                     <TextView
                         android:id="@+id/completetest"
-                        android:layout_width="280dp"
-                        android:layout_height="152dp"
+                        android:layout_width="309dp"
+                        android:layout_height="185dp"
                         android:layout_gravity="center"
-                        android:layout_marginTop="10dp"
                         android:layout_marginBottom="60dp"
+                        android:layout_marginTop="10dp"
                         android:background="@drawable/myborder"
                         android:gravity="center"
                         android:text="Question"
@@ -104,7 +104,7 @@
                             android:ems="4"
                             android:text="Réponse a "
                             android:textColor="@color/ecriture"
-                            android:textSize="@dimen/subtext"
+                            android:textSize="@dimen/text"
                             android:textStyle="bold"
                             android:typeface="serif" />
 
@@ -119,7 +119,7 @@
                             android:ems="4"
                             android:text="Réponse b"
                             android:textColor="@color/ecriture"
-                            android:textSize="@dimen/subtext"
+                            android:textSize="@dimen/text"
                             android:textStyle="bold"
                             android:typeface="serif" />
 
@@ -137,12 +137,12 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="40dp"
-                            android:layout_marginBottom="100dp"
+                            android:layout_marginBottom="45dp"
                             android:background="@drawable/myborder1"
                             android:ems="4"
                             android:text="Réponse c"
                             android:textColor="@color/ecriture"
-                            android:textSize="@dimen/subtext"
+                            android:textSize="@dimen/text"
                             android:textStyle="bold"
                             android:typeface="serif" />
 
@@ -152,12 +152,12 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="50dp"
                             android:layout_marginTop="40dp"
-                            android:layout_marginBottom="100dp"
+                            android:layout_marginBottom="45dp"
                             android:background="@drawable/myborder1"
                             android:ems="4"
                             android:text="Réponse d"
                             android:textColor="@color/ecriture"
-                            android:textSize="@dimen/subtext"
+                            android:textSize="@dimen/text"
                             android:textStyle="bold"
                             android:typeface="serif" />
 
@@ -166,12 +166,6 @@
 
                 </LinearLayout>
             </ScrollView>
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Button" />
         </FrameLayout>
     </LinearLayout>
 

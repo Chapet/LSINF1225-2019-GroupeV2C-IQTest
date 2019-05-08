@@ -4,7 +4,7 @@
     <!--MEPwelcome-->
     <dimen name="imwtop">170dp</dimen>
     <dimen name="imwbott">238dp</dimen>
-    <dimen name="titlewsize">40sp</dimen>
+    <dimen name="titlewsize">35sp</dimen>
     <dimen name="titlewtop">90dp</dimen>
 
     <!--MEPconnexion-->
@@ -17,7 +17,7 @@
     <dimen name="subtext">16sp</dimen>
 
     <!--Image-->
-    <dimen name="size_logo">240dp</dimen>
+    <dimen name="size_logo">220dp</dimen>
 
 
     <!--Mepmenu et cat-->

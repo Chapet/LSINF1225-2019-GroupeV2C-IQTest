@@ -71,7 +71,7 @@
                         android:textStyle="bold"
                         android:typeface="serif" />
 
-                    <TextView
+                   <!-- <TextView
                         android:id="@+id/spatial"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
                         android:textColor="@color/ecriture"
                         android:textSize="@dimen/text"
                         android:textStyle="bold"
-                        android:typeface="serif" />
+                        android:typeface="serif" />-->
 
                     <TextView
                         android:id="@+id/mental"
@@ -98,7 +98,7 @@
                         android:typeface="serif" />
 
 
-                    <TextView
+                    <!--<TextView
                         android:id="@+id/paper"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -109,7 +109,7 @@
                         android:textColor="@color/ecriture"
                         android:textSize="@dimen/text"
                         android:textStyle="bold"
-                        android:typeface="serif" />
+                        android:typeface="serif" />-->
 
                     <TextView
                         android:id="@+id/textentree"
@@ -127,15 +127,6 @@
             </ScrollView>
         </FrameLayout>
     </LinearLayout>
-    <!--
-         Navigation view to show the menu items
-    -->
-    <android.support.design.widget.NavigationView
-        android:id="@+id/navigation"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="right"
-        app:menu="@menu/nav_item" />
 
 </android.support.v4.widget.DrawerLayout>
 

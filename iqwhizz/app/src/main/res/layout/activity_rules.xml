@@ -52,17 +52,6 @@
                     android:textSize="@dimen/text" />
 
                 <TextView
-                    android:id="@+id/spatial"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="@dimen/bott"
-                    android:gravity="center"
-                    android:text="@string/rule_3"
-                    android:textColor="@color/blanc"
-                    android:textSize="@dimen/text" />
-
-                <TextView
                     android:id="@+id/time3"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
@@ -89,14 +78,6 @@
             </LinearLayout>
         </FrameLayout>
     </LinearLayout>
-    <!--
-         Navigation view to show the menu items
-    -->
-    <android.support.design.widget.NavigationView
-        android:id="@+id/navigation"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="right"
-        app:menu="@menu/nav_item" />
+
 
 </android.support.v4.widget.DrawerLayout>

@@ -1,10 +1,12 @@
 package be.uclouvain.lsinf1225.groupeV2C.iqtest;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -21,12 +23,16 @@ public class menu extends AppCompatActivity {
     private TextView completetest;
     private TextView quicktest;
     private TextView flashtest;
+    private TextView Myresult;
+    private menu addfriends;
     DrawerLayout dLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        this.addfriends=this;
         this.categories = (TextView) findViewById(R.id.categories);
         categories.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +66,14 @@ public class menu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent flash = new Intent(getApplicationContext(), rulesflash.class);
                 startActivity(flash);
+            }
+        });
+        this.Myresult = (TextView) findViewById(R.id.myscores);
+        Myresult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent score = new Intent(getApplicationContext(), My_Result.class);
+                startActivity(score);
             }
         });
 
