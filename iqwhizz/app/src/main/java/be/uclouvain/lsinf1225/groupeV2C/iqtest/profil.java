@@ -58,7 +58,7 @@ public class profil extends AppCompatActivity {
         Log.d("toolbar","before");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar); // get the reference of Toolbar
         setSupportActionBar(toolbar); // Setting/replace toolbar as the ActionBar
-        toolbar.setTitle(getResources().getString(R.string.my_profil));
+        toolbar.setTitle(getResources().getString(R.string.My_profile));
         toolbar.setNavigationIcon(R.drawable.log_out);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Log.d("toolbar","after");
