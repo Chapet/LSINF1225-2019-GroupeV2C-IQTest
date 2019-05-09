@@ -141,13 +141,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // INSERT INTO TABLE_NAME VALUES (value1,value2,value3,...valueN);
     }
-
-    public static int getQuestions() {
-        int ret = 0;
-        Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT * FROM QUESTIONS", null);
-        while (mCur.moveToNext()) {
-            ret = mCur.getColumnCount();
-        }
-        return ret;
+    // Retourne une question a l'indexe num
+    public static Object[] getQuestion(int num) {
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT * FROM QUESTIONS WHERE NumQuest = num", null);
+        Object tab[] = new Object[6];
+        tab[0] = mCur.getString(3); // statement
+        tab[1] = mCur.getInt(4); // correct
+        tab[2] = mCur.getInt(5); // answer 1
+        tab[3] = mCur.getInt(6);
+        tab[4] = mCur.getInt(7);
+        tab[5] = mCur.getInt(8); // answer 4
+        return tab;
     }
 }

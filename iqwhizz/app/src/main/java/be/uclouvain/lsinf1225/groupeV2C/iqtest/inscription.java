@@ -68,67 +68,63 @@ public class inscription extends AppCompatActivity {
                 int birthyearInput = birthyear.getText().length();
                 int birthyearNumber = Integer.parseInt(birthyear.getText().toString());
                 int localityInput = locality.getText().length();
-                if(userNameInput < 3 || passwordInput < 6 || birthyearInput != 4 || birthyearNumber > 2019 || birthyearNumber < 1920 ||
-                        localityInput < 3){
-                    if(userNameInput < 3){
+                if (userNameInput < 3 || passwordInput < 6 || birthyearInput != 4 || birthyearNumber > 2019 || birthyearNumber < 1920 ||
+                        localityInput < 3) {
+                    if (userNameInput < 3) {
                         usernameError.setVisibility(View.VISIBLE);
-                    }
-                    else{
+                    } else {
                         usernameError.setVisibility(View.INVISIBLE);
                     }
 
-                    if(passwordInput < 6){
+                    if (passwordInput < 6) {
                         passwordError.setVisibility(View.VISIBLE);
                     }
-                    if(passwordInput > 20){
+                    if (passwordInput > 20) {
                         passwordError.setVisibility(View.VISIBLE);
-                    }
-                    else{
+                    } else {
                         passwordError.setVisibility(View.INVISIBLE);
                     }
 
-                    if(birthyearInput != 4 || birthyearNumber > 2019 || birthyearNumber < 1920){
+                    if (birthyearInput != 4 || birthyearNumber > 2019 || birthyearNumber < 1920) {
                         birthyearError.setVisibility(View.VISIBLE);
-                    }
-                    else{
+                    } else {
                         birthyearError.setVisibility(View.INVISIBLE);
                     }
 
-                    if(localityInput < 3){
+                    if (localityInput < 3) {
                         localityError.setVisibility(View.VISIBLE);
-                    }
-                    else{
+                    } else {
                         localityError.setVisibility(View.INVISIBLE);
                     }
-                }
-                else{
-                    DatabaseHelper.insertInfoUser(username.getText().toString(),password.getText().toString(),Integer.parseInt(birthyear.getText().toString()),locality.getText().toString());
+                } else {
+                    DatabaseHelper.insertInfoUser(username.getText().toString(), password.getText().toString(), Integer.parseInt(birthyear.getText().toString()), locality.getText().toString());
                     openActivity2();
                 }
             }
         });
 
     }
-    private void openGallery(){
+
+    private void openGallery() {
         Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
         startActivityForResult(gallery, PICK_IMAGE);
-        }
     }
 
-    public void openActivity2(){
+
+    public void openActivity2() {
         Intent intent = new Intent(this, menu.class);
         startActivity(intent);
     }
-}
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
-        super.onActivityResult(requestCode,resultCode,data);
-        if(resultCode == RESULT_OK && requestCode == PICK_IMAGE){
+
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK && requestCode == PICK_IMAGE) {
             imageUri = data.getData();
 
             InputStream inputStream;
             try {
-                inputStream =  getContentResolver().openInputStream(imageUri);
+                inputStream = getContentResolver().openInputStream(imageUri);
                 Bitmap image = BitmapFactory.decodeStream(inputStream);
                 imageView.setImageBitmap(image);
 
@@ -137,4 +133,6 @@ public class inscription extends AppCompatActivity {
                 Toast.makeText(this, "Unable to open image", Toast.LENGTH_LONG).show();
             }
             imageView.setImageURI(imageUri);
+        }
+    }
 }
