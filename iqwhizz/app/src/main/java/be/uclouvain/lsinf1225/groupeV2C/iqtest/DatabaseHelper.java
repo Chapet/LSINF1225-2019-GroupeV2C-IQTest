@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
+import android.database.CharArrayBuffer;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -71,7 +72,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             try {
                 copyDBFile();
             } catch (IOException mIOException) {
-                throw new Error("ErrorCopyingDataBase");
+                throw new RuntimeException(mIOException);
             }
         }
     }
@@ -152,5 +153,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         tab[4] = mCur.getInt(7);
         tab[5] = mCur.getInt(8); // answer 4
         return tab;
+    }
+    public static boolean con(String user,String pass) {
+        System.out.println(user + " 2 " + pass);
+        CharArrayBuffer ret = null;
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT * FROM USER WHERE Username = ?",new String[]{user});
+        while (mCur.moveToNext()) {
+            if(mCur.getString(0).equals(user)){
+                return (mCur.getString(1).equals(pass));
+            }
+        }
+        return false;
     }
 }
