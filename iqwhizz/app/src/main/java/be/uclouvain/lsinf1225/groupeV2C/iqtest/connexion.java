@@ -5,9 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class connexion extends AppCompatActivity {
-
+    public static EditText user;
+    public static EditText pass;
+    public static String users;
+    public static String passw;
     private Button men;
     private Button signup;
 
@@ -15,13 +19,18 @@ public class connexion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
-
+        user=findViewById(R.id.editText);
+        pass=findViewById(R.id.editText2);
+        users=user.getText().toString();
+        passw=pass.getText().toString();
         this.men = (Button) findViewById(R.id.men);
         men.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent signin = new Intent(getApplicationContext(), menu.class);
-                startActivity(signin);
+                if(DatabaseHelper.con(users,passw)){
+                    Intent signin = new Intent(getApplicationContext(), menu.class);
+                    startActivity(signin);
+                }
             }
         });
 

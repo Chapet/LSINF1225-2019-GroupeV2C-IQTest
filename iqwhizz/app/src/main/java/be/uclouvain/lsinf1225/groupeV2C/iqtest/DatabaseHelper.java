@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
+import android.database.CharArrayBuffer;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -149,5 +150,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             ret = mCur.getColumnCount();
         }
         return ret;
+    }
+    public static boolean con(String user,String pass) {
+        CharArrayBuffer ret = null;
+        Cursor mCurus = dbhInstance.mDataBase.rawQuery("SELECT * FROM USER",null);
+        while (mCurus.moveToNext()) {
+            if(mCurus.getString(0).equals(user)){
+                return (mCurus.getString(1).equals(pass));
+            }
+        }
+        return false;
     }
 }
