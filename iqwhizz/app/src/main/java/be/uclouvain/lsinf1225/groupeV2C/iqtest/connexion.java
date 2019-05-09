@@ -21,12 +21,12 @@ public class connexion extends AppCompatActivity {
         setContentView(R.layout.activity_connexion);
         user=findViewById(R.id.editText);
         pass=findViewById(R.id.editText2);
-        users=user.getText().toString();
-        passw=pass.getText().toString();
         this.men = (Button) findViewById(R.id.men);
         men.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                users = user.getText().toString();
+                passw = pass.getText().toString();
                 if(DatabaseHelper.con(users,passw)){
                     Intent signin = new Intent(getApplicationContext(), menu.class);
                     startActivity(signin);

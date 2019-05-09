@@ -72,7 +72,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             try {
                 copyDBFile();
             } catch (IOException mIOException) {
-                throw new Error("ErrorCopyingDataBase");
+                throw new RuntimeException(mIOException);
             }
         }
     }
@@ -152,11 +152,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return ret;
     }
     public static boolean con(String user,String pass) {
+        System.out.println(user + " 2 " + pass);
         CharArrayBuffer ret = null;
-        Cursor mCurus = dbhInstance.mDataBase.rawQuery("SELECT * FROM USER",null);
-        while (mCurus.moveToNext()) {
-            if(mCurus.getString(0).equals(user)){
-                return (mCurus.getString(1).equals(pass));
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT * FROM USER WHERE Username = ?",new String[]{user});
+        while (mCur.moveToNext()) {
+            if(mCur.getString(0).equals(user)){
+                return (mCur.getString(1).equals(pass));
             }
         }
         return false;
