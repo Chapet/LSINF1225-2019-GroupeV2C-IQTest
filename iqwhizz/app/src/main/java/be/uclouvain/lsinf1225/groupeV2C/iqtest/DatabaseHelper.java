@@ -142,5 +142,50 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // INSERT INTO TABLE_NAME VALUES (value1,value2,value3,...valueN);
     }
-
+    // Retourne une question a l'indexe num
+    public static Object[] getQuestion(int num) {
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT * FROM QUESTIONS WHERE NumQuest = num", null);
+        Object tab[] = new Object[6];
+        tab[0] = mCur.getString(3); // statement
+        tab[1] = mCur.getInt(4); // correct
+        tab[2] = mCur.getInt(5); // answer 1
+        tab[3] = mCur.getInt(6);
+        tab[4] = mCur.getInt(7);
+        tab[5] = mCur.getInt(8); // answer 4
+        return tab;
+    }
+    public static boolean con(String user,String pass) {
+        System.out.println(user + " 2 " + pass);
+        CharArrayBuffer ret = null;
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT * FROM USER WHERE Username = ?",new String[]{user});
+        while (mCur.moveToNext()) {
+            if(mCur.getString(0).equals(user)){
+                return (mCur.getString(1).equals(pass));
+            }
+        }
+        return false;
+    }
+    public static Object[] getQuestion(int num) {
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT * FROM QUESTIONS WHERE NumQuest = num", null);
+        Object tab[] = new Object[6];
+        tab[0] = mCur.getString(3); // statement
+        tab[1] = mCur.getInt(4); // correct
+        tab[2] = mCur.getInt(5); // answer 1
+        tab[3] = mCur.getInt(6);
+        tab[4] = mCur.getInt(7);
+        tab[5] = mCur.getInt(8); // answer 4
+        return tab;
+    }
+    public static boolean con(String user,String pass) {
+        System.out.println(user + " 2 " + pass);
+        CharArrayBuffer ret = null;
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT * FROM USER WHERE Username = ?",new String[]{user});
+        while (mCur.moveToNext()) {
+            if(mCur.getString(0).equals(user)){
+                return (mCur.getString(1).equals(pass));
+            }
+        }
+        return false;
+    }
+    
 }
