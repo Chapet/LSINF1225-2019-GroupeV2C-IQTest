@@ -135,16 +135,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return ret;
     }
 
-    public static void insertInfoUser(String username, String password, int birthyear, String localite)
-    {
-        Cursor mCur = dbhInstance.mDataBase.rawQuery("INSERT INTO User VALUES(" + username+"," + password + "," + birthyear + "," + localite+")", null);
-
-
-        // INSERT INTO TABLE_NAME VALUES (value1,value2,value3,...valueN);
-    }
     // Retourne une question a l'indexe num
     public static Object[] getQuestion(int num) {
-        Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT * FROM QUESTION WHERE NumQuest = '" + num +"'", null);
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT * FROM QUESTION WHERE NumQuest = '" + num + "'", null);
         Object tab[] = new Object[6];
         while (mCur.moveToNext()) {
             tab[0] = mCur.getString(2); // statement
@@ -156,45 +149,57 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return tab;
     }
-    public static boolean con(String user,String pass) {
+
+    public static boolean con(String user, String pass) {
         System.out.println(user + " 2 " + pass);
         CharArrayBuffer ret = null;
-        Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT * FROM USER WHERE Username = ?",new String[]{user});
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT * FROM USER WHERE Username = ?", new String[]{user});
         while (mCur.moveToNext()) {
-            if(mCur.getString(0).equals(user)){
+            if (mCur.getString(0).equals(user)) {
                 return (mCur.getString(1).equals(pass));
             }
         }
         return false;
     }
 
-    public static void updateScore(){ //updates the score
+    public static void updateScore() { //updates the score
 
     }
 
     public static void newGame() { //creates a new game in the database
-        Cursor mCur = dbhInstance.mDataBase.rawQuery("INSERT INTO GAME (Type, User) VALUES('"+40+"','"+connexion.curUser+"')",null);
-        while (mCur.moveToNext());{
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("INSERT INTO GAME (Type, User) VALUES('" + 40 + "','" + connexion.curUser + "')", null);
+        while (mCur.moveToNext()) ;
+        {
         }
         return;
     }
 
-    /*public static void testGame() {
+    public static void testDBUSER() {
         String ret = "";
-        Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT * FROM GAME", null);
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT * FROM USER", null);
         while (mCur.moveToNext()) {
             ret = mCur.getString(0);
         }
-        System.out.println("ICI TEST DE LA DB GAME");
+        System.out.println("ICI TEST DE LA DB USER");
         System.out.println(ret);
         return;
-    }*/
+    }
+
 
     public static int[] getQuizz() {
         int[] retQuizz = new int[40];
-        for(int i = 0; i < 40; ++i) {
+        for (int i = 0; i < 40; ++i) {
             retQuizz[i] = ((int) (Math.random() * 49)) + 1;
         }
         return retQuizz;
+    }
+
+    public static void insertInfoUser(String username, String password, int birthyear, String localite) {
+
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("INSERT INTO USER (Username,Password, Birthyear, Locality) VALUES('" + username + "','" + password + "','" + birthyear + "','" + localite + "')", null);
+        while (mCur.moveToNext()) ;
+        {
+        }
+        return;
     }
 }
