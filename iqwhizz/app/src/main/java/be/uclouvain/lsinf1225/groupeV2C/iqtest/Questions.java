@@ -14,10 +14,10 @@ public class Questions extends AppCompatActivity implements View.OnClickListener
     public TextView countDowntxt;
     public CountDownTimer countDownTimer;
     private long timeleftms=2400000;
-    private Button answer1;
-    private Button answer2;
-    private Button answer3;
-    private Button answer4;
+    private TextView answer1;
+    private TextView answer2;
+    private TextView answer3;
+    private TextView answer4;
     private TextView statement;
     private int userAns;
     private Object tab[];

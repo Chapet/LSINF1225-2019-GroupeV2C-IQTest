@@ -94,7 +94,7 @@
                         android:gravity="center"
                         android:orientation="horizontal">
 
-                        <Button
+                        <TextView
                             android:id="@+id/repa"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -108,7 +108,7 @@
                             android:textStyle="bold"
                             android:typeface="serif" />
 
-                        <Button
+                        <TextView
                             android:id="@+id/repb"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -132,7 +132,7 @@
                         android:gravity="center"
                         android:orientation="horizontal">
 
-                        <Button
+                        <TextView
                             android:id="@+id/repc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -146,7 +146,7 @@
                             android:textStyle="bold"
                             android:typeface="serif" />
 
-                        <Button
+                        <TextView
                             android:id="@+id/repd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
