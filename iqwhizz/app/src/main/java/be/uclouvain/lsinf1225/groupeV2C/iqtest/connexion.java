@@ -14,6 +14,7 @@ public class connexion extends AppCompatActivity {
     public static String passw;
     private Button men;
     private Button signup;
+    public static String curUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class connexion extends AppCompatActivity {
                 users = user.getText().toString();
                 passw = pass.getText().toString();
                 if(DatabaseHelper.con(users,passw)){
+                    curUser = users;
                     Intent signin = new Intent(getApplicationContext(), menu.class);
                     startActivity(signin);
                 }

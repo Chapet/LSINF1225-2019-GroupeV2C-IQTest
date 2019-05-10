@@ -2,7 +2,7 @@ package be.uclouvain.lsinf1225.groupeV2C.iqtest;
 
 public class Question_java {
     String statement;
-    int correctAns;
+    private static int correctAns;
     String ans1;
     String ans2;
     String ans3;
@@ -25,7 +25,7 @@ public class Question_java {
         this.statement = statement;
     }
 
-    public int getCorrectAns() {
+    public static int getCorrectAns() {
         return correctAns;
     }
 

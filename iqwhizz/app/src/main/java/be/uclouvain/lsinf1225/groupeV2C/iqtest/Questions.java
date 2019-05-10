@@ -19,6 +19,7 @@ public class Questions extends AppCompatActivity implements View.OnClickListener
     private Button answer3;
     private Button answer4;
     private TextView statement;
+    private int userAns;
 
 
 
@@ -53,7 +54,7 @@ public class Questions extends AppCompatActivity implements View.OnClickListener
         answer4.setTag(3);
 
         int index = 1;
-        Object tab[] = new Object[6];
+        Object tab[];
         tab = DatabaseHelper.getQuestion(index);
         index++;
         Question_java question = new Question_java(tab[0].toString(),Integer.parseInt(tab[1].toString()),tab[2].toString(),tab[3].toString(),tab[4].toString(),tab[5].toString());
@@ -98,7 +99,9 @@ public class Questions extends AppCompatActivity implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
-        int responseIndex = (int) v.getTag(); // retourne l'index du bouton surlequel le user a appuyé
-
+        userAns = (int) v.getTag(); // retourne l'index du bouton surlequel le user a appuyé
+        if (userAns == Question_java.getCorrectAns()) {
+            DatabaseHelper.updateScore();
+        }
     }
 }

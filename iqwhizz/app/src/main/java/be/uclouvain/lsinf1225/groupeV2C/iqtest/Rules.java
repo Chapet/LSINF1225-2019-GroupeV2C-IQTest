@@ -38,6 +38,7 @@ public class Rules extends AppCompatActivity {
         Go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                DatabaseHelper.newGame();
                 Intent quest = new Intent(getApplicationContext(), Questions.class);
                 startActivity(quest);
                 finish();

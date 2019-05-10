@@ -144,14 +144,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
     // Retourne une question a l'indexe num
     public static Object[] getQuestion(int num) {
-        Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT * FROM QUESTIONS WHERE NumQuest = num", null);
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT * FROM QUESTION WHERE NumQuest = '" + num +"'", null);
         Object tab[] = new Object[6];
-        tab[0] = mCur.getString(3); // statement
-        tab[1] = mCur.getInt(4); // correct
-        tab[2] = mCur.getInt(5); // answer 1
-        tab[3] = mCur.getInt(6);
-        tab[4] = mCur.getInt(7);
-        tab[5] = mCur.getInt(8); // answer 4
+        while (mCur.moveToNext()) {
+            tab[0] = mCur.getString(2); // statement
+            tab[1] = mCur.getInt(3); // correct
+            tab[2] = mCur.getString(4); // answer 1
+            tab[3] = mCur.getString(5);
+            tab[4] = mCur.getString(6);
+            tab[5] = mCur.getString(7); // answer 4
+        }
         return tab;
     }
     public static boolean con(String user,String pass) {
@@ -166,6 +168,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return false;
     }
 
-    // Ajouter ici les fonctions pour les DAO
+    public static void updateScore(){ //updates the score
 
+    }
+
+    public static void newGame() { //creates a new game in the database
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("INSERT INTO GAME (Type, User) VALUES('"+40+"','"+connexion.curUser+"')",null);
+        while (mCur.moveToNext());{
+        }
+        return;
+    }
+
+    /*public static void testGame() {
+        String ret = "";
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT * FROM GAME", null);
+        while (mCur.moveToNext()) {
+            ret = mCur.getString(0);
+        }
+        System.out.println("ICI TEST DE LA DB GAME");
+        System.out.println(ret);
+        return;
+    }*/
+
+    public static int[] getQuizz() {
+        int[] retQuizz = new int[40];
+        for(int i = 0; i < 40; ++i) {
+            retQuizz[i] = ((int) (Math.random() * 49)) + 1;
+        }
+        return retQuizz;
+    }
 }
