@@ -98,6 +98,7 @@ public class inscription extends AppCompatActivity {
                     }
                 } else {
                     DatabaseHelper.insertInfoUser(username.getText().toString(), password.getText().toString(), Integer.parseInt(birthyear.getText().toString()), locality.getText().toString());
+                    DatabaseHelper.testDBUSER();
                     openActivity2();
                 }
             }
@@ -112,7 +113,7 @@ public class inscription extends AppCompatActivity {
 
 
     public void openActivity2() {
-        Intent intent = new Intent(this, menu.class);
+        Intent intent = new Intent(this, connexion.class);
         startActivity(intent);
     }
 
