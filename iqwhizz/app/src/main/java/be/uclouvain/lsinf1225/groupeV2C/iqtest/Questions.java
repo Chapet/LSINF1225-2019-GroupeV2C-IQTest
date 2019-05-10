@@ -14,13 +14,16 @@ public class Questions extends AppCompatActivity implements View.OnClickListener
     public TextView countDowntxt;
     public CountDownTimer countDownTimer;
     private long timeleftms=2400000;
-    private Button answer1;
-    private Button answer2;
-    private Button answer3;
-    private Button answer4;
+    private TextView answer1;
+    private TextView answer2;
+    private TextView answer3;
+    private TextView answer4;
     private TextView statement;
     private int userAns;
-
+    private Object tab[];
+    private Question_java question;
+    private int count = 0;
+    private int index_tab[];
 
 
     Button result;
@@ -41,11 +44,11 @@ public class Questions extends AppCompatActivity implements View.OnClickListener
         answer4 = findViewById(R.id.repd);
 
         statement = findViewById(R.id.completetest);
-
+        /*
         answer1.setOnClickListener(this);
         answer2.setOnClickListener(this);
         answer3.setOnClickListener(this);
-        answer4.setOnClickListener(this);
+        answer4.setOnClickListener(this);*/
 
         // Use the tag property to 'name' the buttons
         answer1.setTag(0);
@@ -53,12 +56,50 @@ public class Questions extends AppCompatActivity implements View.OnClickListener
         answer3.setTag(2);
         answer4.setTag(3);
 
-        int index = 1;
-        Object tab[];
-        tab = DatabaseHelper.getQuestion(index);
-        index++;
-        Question_java question = new Question_java(tab[0].toString(),Integer.parseInt(tab[1].toString()),tab[2].toString(),tab[3].toString(),tab[4].toString(),tab[5].toString());
-        displayQuestion(question);
+        int number_of_question = 40;
+        index_tab = getQuizz();
+
+
+        while(count < 40){
+            if(count == 0){
+                tab = DatabaseHelper.getQuestion(index_tab[count]);
+                question = new Question_java(tab[0].toString(), Integer.parseInt(tab[1].toString()), tab[2].toString(), tab[3].toString(), tab[4].toString(), tab[5].toString());
+
+            }
+            displayQuestion(question);
+            answer1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    count++;
+                    tab = DatabaseHelper.getQuestion(index_tab[count]);
+                    question = new Question_java(tab[0].toString(), Integer.parseInt(tab[1].toString()), tab[2].toString(), tab[3].toString(), tab[4].toString(), tab[5].toString());
+                }
+            });
+            answer2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    count++;
+                    tab = DatabaseHelper.getQuestion(index_tab[count]);
+                    question = new Question_java(tab[0].toString(), Integer.parseInt(tab[1].toString()), tab[2].toString(), tab[3].toString(), tab[4].toString(), tab[5].toString());
+                }
+            });
+            answer3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    count++;
+                    tab = DatabaseHelper.getQuestion(index_tab[count]);
+                    question = new Question_java(tab[0].toString(), Integer.parseInt(tab[1].toString()), tab[2].toString(), tab[3].toString(), tab[4].toString(), tab[5].toString());
+                }
+            });
+            answer4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    count++;
+                    tab = DatabaseHelper.getQuestion(index_tab[count]);
+                    question = new Question_java(tab[0].toString(), Integer.parseInt(tab[1].toString()), tab[2].toString(), tab[3].toString(), tab[4].toString(), tab[5].toString());
+                }
+            });
+        }
     }
 
 
@@ -96,6 +137,15 @@ public class Questions extends AppCompatActivity implements View.OnClickListener
         answer4.setText(question.getAns4());
         statement.setText(question.getStatement());
     }
+
+    public static int[] getQuizz() {
+        int[] retQuizz = new int[40];
+        for(int i = 0; i < 40; ++i) {
+            retQuizz[i] = ((int) (Math.random() * 49)) + 1;
+        }
+        return retQuizz;
+    }
+
 
     @Override
     public void onClick(View v) {
