@@ -139,6 +139,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static Object[] getQuestion(int num) {
         Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT * FROM QUESTION WHERE NumQuest = '" + num + "'", null);
         Object tab[] = new Object[6];
+        System.out.println("je suis la");
         while (mCur.moveToNext()) {
             tab[0] = mCur.getString(2); // statement
             tab[1] = mCur.getInt(3); // correct
