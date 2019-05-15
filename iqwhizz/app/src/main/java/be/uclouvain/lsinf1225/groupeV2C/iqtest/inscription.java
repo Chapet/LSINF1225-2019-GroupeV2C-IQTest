@@ -17,6 +17,8 @@ import android.widget.Toast;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+
+import static java.sql.Types.NULL;
 // Attention, on ne peut pas passer à l'écran suivant en ayant que sélectionner un avatar.
 
 public class inscription extends AppCompatActivity {
@@ -69,35 +71,35 @@ public class inscription extends AppCompatActivity {
                 int birthyearNumber = Integer.parseInt(birthyear.getText().toString());
                 int localityInput = locality.getText().length();
                 if (userNameInput < 3 || passwordInput < 6 || birthyearInput != 4 || birthyearNumber > 2019 || birthyearNumber < 1920 ||
-                        localityInput < 3) {
-                    if (userNameInput < 3) {
+                        localityInput < 3 && userNameInput == NULL) {
+                    if (userNameInput < 3 || userNameInput == NULL) {
                         usernameError.setVisibility(View.VISIBLE);
                     } else {
                         usernameError.setVisibility(View.INVISIBLE);
                     }
 
-                    if (passwordInput < 6) {
+                    if (passwordInput < 6 || passwordInput == NULL ) {
                         passwordError.setVisibility(View.VISIBLE);
                     }
-                    if (passwordInput > 20) {
+                    if (passwordInput > 20 || passwordInput == NULL) {
                         passwordError.setVisibility(View.VISIBLE);
                     } else {
                         passwordError.setVisibility(View.INVISIBLE);
                     }
 
-                    if (birthyearInput != 4 || birthyearNumber > 2019 || birthyearNumber < 1920) {
+                    if (birthyearInput != 4 || birthyearNumber > 2019 || birthyearNumber < 1920 || birthyearInput == NULL) {
                         birthyearError.setVisibility(View.VISIBLE);
                     } else {
                         birthyearError.setVisibility(View.INVISIBLE);
                     }
 
-                    if (localityInput < 3) {
+                    if (localityInput < 3 || localityInput == NULL) {
                         localityError.setVisibility(View.VISIBLE);
                     } else {
                         localityError.setVisibility(View.INVISIBLE);
                     }
                 } else {
-                    DatabaseHelper.insertInfoUser(username.getText().toString(), password.getText().toString(), Integer.parseInt(birthyear.getText().toString()), locality.getText().toString());
+                    DatabaseHelper.insertInfoUser(username.getText().toString(), password.getText().toString(), Integer.parseInt(birthyear.getText().toString()), locality.getText().toString(), null);
                     DatabaseHelper.testDBUSER();
                     openActivity2();
                 }
