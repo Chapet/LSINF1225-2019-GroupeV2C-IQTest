@@ -108,6 +108,7 @@ public class Question5 extends AppCompatActivity implements View.OnClickListener
         userAns = (int) v.getTag(); // retourne l'index du bouton surlequel le user a appuyé
         obj=DatabaseHelper.getQuestion(Nques[count]);
         DatabaseHelper.newAnswer(userAns, ((int)obj[1] == userAns), (int) obj[6], DatabaseHelper.getCurGameID());
+        if(userAns == (int)obj[1]) {DatabaseHelper.updateScore();}
     }
     public void nextQ(View view) {
         count++;

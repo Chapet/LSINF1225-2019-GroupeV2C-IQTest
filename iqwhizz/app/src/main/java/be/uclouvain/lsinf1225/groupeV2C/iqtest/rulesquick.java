@@ -33,6 +33,8 @@ public class rulesquick extends AppCompatActivity {
         Go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                DatabaseHelper.newGame();
+                DatabaseHelper.score = 0;
                 Intent quest = new Intent(getApplicationContext(), Question5.class);
                 startActivity(quest);
                 finish();

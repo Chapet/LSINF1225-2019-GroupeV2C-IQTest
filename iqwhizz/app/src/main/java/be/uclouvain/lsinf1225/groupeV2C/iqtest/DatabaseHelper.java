@@ -6,8 +6,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.sql.Blob;
-import java.util.ArrayList;
-import java.util.List;
 
 import android.content.Context;
 import android.database.CharArrayBuffer;
@@ -24,6 +22,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private SQLiteDatabase mDataBase;
     private final Context mContext;
     private boolean mNeedUpdate = false;
+    public static int score = 0;
 
     public static void testwhat(Context context) {
         DatabaseHelper dbHelp = new DatabaseHelper(context);
@@ -183,7 +182,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public static void newAnswer(int userAns, boolean isCorrect, int numQuest, int numGame) { //creates a new game in the database
-        Cursor mCur = dbhInstance.mDataBase.rawQuery("INSERT INTO ANSWER (UserAns, IsCorrect, NumQuest, NumGame) VALUES('" + userAns + "','" + ((isCorrect)?1:0) + "','"+ numQuest +"','"+numGame+"')", null);
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("INSERT INTO ANSWER (UserAns, IsCorrect, NumQuest, NumGame, User) VALUES('" + userAns + "','" + ((isCorrect)?1:0) + "','"+ numQuest +"','"+numGame+"','"+connexion.curUser+"')", null);
         while (mCur.moveToNext())
         {
         }
@@ -198,6 +197,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 ret += mCur.getInt(2);
         }
         return ret;
+    }
+
+    public static void updateScore() {
+        score++;
     }
 
     public static void testDBUSER() {
