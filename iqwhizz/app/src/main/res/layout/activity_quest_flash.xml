@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="left"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- include your toolbar layout-->
+        <include layout="@layout/toolbar" />
+
+        <!-- Let's add fragment -->
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/ScrollView01"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="89dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="25dp"
+                            android:ems="8"
+                            android:text="Question N° 1"
+                            android:textColor="@color/ecriture"
+                            android:textSize="@dimen/subtext"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            android:id="@+id/time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:ems="7"
+                            android:text="Time : 40:00"
+                            android:textColor="@color/ecriture"
+                            android:textSize="@dimen/subtext"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/completetest"
+                        android:layout_width="280dp"
+                        android:layout_height="195dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="60dp"
+                        android:background="@drawable/myborder"
+                        android:gravity="center"
+                        android:text="Question"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/text"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/repa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginBottom="45dp"
+                            android:background="@drawable/myborder1"
+                            android:ems="4"
+                            android:text="Réponse a "
+                            android:onClick="nextQ"
+                            android:textColor="@color/ecriture"
+                            android:textSize="@dimen/subtext"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <Button
+                            android:id="@+id/repb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:onClick="nextQ"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginBottom="45dp"
+                            android:background="@drawable/myborder1"
+                            android:ems="4"
+                            android:text="Réponse b"
+                            android:textColor="@color/ecriture"
+                            android:textSize="@dimen/subtext"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/repc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginBottom="100dp"
+                            android:background="@drawable/myborder1"
+                            android:onClick="nextQ"
+                            android:ems="4"
+                            android:text="Réponse c"
+                            android:textColor="@color/ecriture"
+                            android:textSize="@dimen/subtext"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <Button
+                            android:id="@+id/repd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginBottom="100dp"
+                            android:background="@drawable/myborder1"
+                            android:onClick="nextQ"
+                            android:ems="4"
+                            android:text="Réponse d"
+                            android:textColor="@color/ecriture"
+                            android:textSize="@dimen/subtext"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

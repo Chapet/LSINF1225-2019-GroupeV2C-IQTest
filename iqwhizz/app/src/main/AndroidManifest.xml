@@ -8,23 +8,24 @@
         android:smallScreens="true" />
 
     <application
-        android:name="IQWhizzApplication"
+        android:name=".IQWhizzApplication"
         android:allowBackup="true"
         android:icon="@drawable/logorond"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".quest_flash"></activity>
         <activity
             android:name=".My_Result"
             android:label="Result"
             android:parentActivityName=".menu"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".see_my_mistakes"
             android:label="@string/see_my_mistakes"
             android:parentActivityName=".Result_quizz"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Result_quizz"
             android:label="Result"

@@ -33,60 +33,60 @@
                     android:orientation="vertical">
 
 
-                        <Button
-                            android:id="@+id/rep1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/boutonctopbot"
-                            android:text="@string/reponse1"
-                            android:textColor="@color/ecriture"
-                            android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/reponse1"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
 
-                        <Button
-                            android:id="@+id/rep2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/boutonctopbot"
-                            android:text="@string/r_ponse_2"
-                            android:textColor="@color/ecriture"
-                            android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_2"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
 
-                        <Button
-                            android:id="@+id/rep3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/boutonctopbot"
-                            android:text="@string/r_ponse_3"
-                            android:textColor="@color/ecriture"
-                            android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_3"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
 
 
-                        <Button
-                            android:id="@+id/rep4"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/boutonctopbot"
-                            android:text="@string/r_ponse_4"
-                            android:textColor="@color/ecriture"
-                            android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_4"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
 
-                        <Button
-                            android:id="@+id/rep5"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/boutonctopbot"
-                            android:text="@string/r_ponse_5"
-                            android:textColor="@color/ecriture"
-                            android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_5"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
 
-                        <Button
-                            android:id="@+id/rep6"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/boutonctopbot"
-                            android:text="@string/r_ponse_6"
-                            android:textColor="@color/ecriture"
-                            android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_6"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
 
                     <Button
                         android:id="@+id/rep7"
@@ -158,7 +158,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/boutonctopbot"
-                        android:text="Réponse 15"
+                        android:text="R\E9ponse 15"
                         android:textColor="@color/ecriture"
                         android:textSize="@dimen/bouton" />
                     <Button
@@ -166,7 +166,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/boutonctopbot"
-                        android:text="Réponse 16"
+                        android:text="R\E9ponse 16"
                         android:textColor="@color/ecriture"
                         android:textSize="@dimen/bouton" />
                     <Button
@@ -174,7 +174,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/boutonctopbot"
-                        android:text="Réponse 17"
+                        android:text="R\E9ponse 17"
                         android:textColor="@color/ecriture"
                         android:textSize="@dimen/bouton" />
                     <Button
