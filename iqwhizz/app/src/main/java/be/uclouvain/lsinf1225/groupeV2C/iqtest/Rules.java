@@ -25,8 +25,6 @@ public class Rules extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules);
 
-        TextView tv13 = (TextView) findViewById(R.id.tV13);
-        tv13.setText("yaou");
         System.out.println(DatabaseHelper.getUserList());
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar); // get the reference of Toolbar

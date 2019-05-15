@@ -97,7 +97,7 @@ public class Questions extends AppCompatActivity implements View.OnClickListener
     public static int[] getQuizz() {
         int[] retQuizz = new int[40];
         for(int i = 0; i < 40; ++i) {
-            retQuizz[i] = ((int) (Math.random() * 40)) + 1;
+            retQuizz[i] = ((int) (Math.random() * 48)) + 1;
         }
         return retQuizz;
     }
