@@ -68,7 +68,11 @@ public class inscription extends AppCompatActivity {
                 int userNameInput = username.getText().length();
                 int passwordInput = password.getText().length();
                 int birthyearInput = birthyear.getText().length();
-                int birthyearNumber = Integer.parseInt(birthyear.getText().toString());
+                int birthyearNumber = 0;
+                if (!birthyear.getText().toString().equals("")) {
+                    System.out.println("on rentre dans le if de l'inscription");
+                    birthyearNumber = Integer.parseInt(birthyear.getText().toString());
+                }
                 int localityInput = locality.getText().length();
                 if (userNameInput < 3 || passwordInput < 6 || birthyearInput != 4 || birthyearNumber > 2019 || birthyearNumber < 1920 ||
                         localityInput < 3 && userNameInput == NULL) {
