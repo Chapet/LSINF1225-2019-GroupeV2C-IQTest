@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ring= MediaPlayer.create(MainActivity.this,R.raw.cigale);
+        ring= MediaPlayer.create(MainActivity.this,R.raw.album);
         ring.start();
 
         this.tapbut = (TextView) findViewById(R.id.tap);

@@ -117,7 +117,7 @@ public class quest_flash extends AppCompatActivity implements View.OnClickListen
     }
     public void nextQ(View view) {
         count++;
-        if(count<48){
+        if(count<47){
             System.out.println(Nques[count]);
             compte=Integer.toString(count+1);
             affiche="Question N° "+compte;
