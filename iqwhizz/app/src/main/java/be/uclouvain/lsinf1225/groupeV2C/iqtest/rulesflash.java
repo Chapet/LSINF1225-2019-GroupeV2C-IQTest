@@ -31,7 +31,7 @@ public class rulesflash extends AppCompatActivity {
         Go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent quest = new Intent(getApplicationContext(), Question5.class);
+                Intent quest = new Intent(getApplicationContext(), quest_flash.class);
                 startActivity(quest);
                 finish();
             }

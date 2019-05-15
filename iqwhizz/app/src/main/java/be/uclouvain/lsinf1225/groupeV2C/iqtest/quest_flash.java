@@ -13,7 +13,7 @@ import android.widget.TextView;
 import static java.lang.Thread.sleep;
 
 
-public class Question5 extends AppCompatActivity implements View.OnClickListener {
+public class quest_flash extends AppCompatActivity implements View.OnClickListener {
     public TextView countDowntxt;
     public CountDownTimer countDownTimer;
     private long timeleftms = 300000;
@@ -23,7 +23,7 @@ public class Question5 extends AppCompatActivity implements View.OnClickListener
     private Button answer4;
     private TextView statement;
     private int userAns;
-    private int [] Nques=new int[5];
+    private int [] Nques=new int[48];
     private int count = 0;
     private TextView nbQuest;
     private String affiche;
@@ -54,8 +54,11 @@ public class Question5 extends AppCompatActivity implements View.OnClickListener
         answer4.setTag(3);
         Nques=getQuizz();
         obj=DatabaseHelper.getQuestion(Nques[0]);
+        System.out.println("aaaaaaa");
         quesab=new Question_java(String.valueOf(obj[0]),(int)obj[1],String.valueOf(obj[2]),String.valueOf(obj[3]),String.valueOf(obj[4]),String.valueOf(obj[5]));
+        System.out.println("ok");
         displayQuestion(quesab);
+        System.out.println("disp");
     }
 
 
@@ -87,6 +90,7 @@ public class Question5 extends AppCompatActivity implements View.OnClickListener
     }
 
     public void displayQuestion(Question_java question){
+        System.out.println("waaaa");
         answer1.setText(question.getAns1());
         answer2.setText(question.getAns2());
         answer3.setText(question.getAns3());
@@ -95,10 +99,17 @@ public class Question5 extends AppCompatActivity implements View.OnClickListener
     }
 
     public static int[] getQuizz() {
-        int[] retQuizz = new int[5];
-        for(int i = 0; i < 5; ++i) {
-            retQuizz[i] = ((int) (Math.random() * 47)) + 1;
+        int[] retQuizz = new int[48];
+        for(int i = 1; i < 48; ++i) {
+            if (i!=5){
+                retQuizz[i-1] = i;
+            }
+            else {
+                retQuizz[i-1] = i+1;
+
+            }
         }
+        System.out.println(retQuizz[0]);
         return retQuizz;
     }
 
@@ -112,7 +123,7 @@ public class Question5 extends AppCompatActivity implements View.OnClickListener
     }
     public void nextQ(View view) {
         count++;
-        if(count<5){
+        if(count<48){
             System.out.println(Nques[count]);
             compte=Integer.toString(count+1);
             affiche="Question N° "+compte;
