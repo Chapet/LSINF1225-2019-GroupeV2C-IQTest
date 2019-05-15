@@ -5,111 +5,57 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Display;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import static java.lang.Thread.sleep;
 
 
 public class Questions extends AppCompatActivity implements View.OnClickListener {
     public TextView countDowntxt;
     public CountDownTimer countDownTimer;
-    private long timeleftms=2400000;
-    private TextView answer1;
-    private TextView answer2;
-    private TextView answer3;
-    private TextView answer4;
+    private long timeleftms = 2400000;
+    private Button answer1;
+    private Button answer2;
+    private Button answer3;
+    private Button answer4;
     private TextView statement;
     private int userAns;
-    private Object tab[];
-    private Question_java question;
+    private int [] Nques=new int[40];
     private int count = 0;
-    private int index_tab[];
-    public int a=0;
+    private TextView nbQuest;
+    private String affiche;
+    private String compte;
+    private Object [] obj=new Object[6];
+    private Question_java quesab;
 
-
-    Button result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
+        nbQuest=findViewById(R.id.count);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar); // get the reference of Toolbar
         setSupportActionBar(toolbar); // Setting/replace toolbar as the ActionBar
         toolbar.setTitle(getResources().getString(R.string.Rules));
         toolbar.setNavigationIcon(R.drawable.retour);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        countDowntxt=(TextView)findViewById(R.id.time);
+        countDowntxt = (TextView) findViewById(R.id.time);
         startTimer();
         answer1 = findViewById(R.id.repa);
         answer2 = findViewById(R.id.repb);
         answer3 = findViewById(R.id.repc);
         answer4 = findViewById(R.id.repd);
-
         statement = findViewById(R.id.completetest);
-        /*
-        answer1.setOnClickListener(this);
-        answer2.setOnClickListener(this);
-        answer3.setOnClickListener(this);
-        answer4.setOnClickListener(this);*/
-
-        // Use the tag property to 'name' the buttons
         answer1.setTag(0);
         answer2.setTag(1);
         answer3.setTag(2);
         answer4.setTag(3);
-
-        index_tab = getQuizz();
-        while(count < 40){
-            if(count == 0){
-                tab = DatabaseHelper.getQuestion(index_tab[count]);
-
-                question = new Question_java(tab[0].toString(), Integer.parseInt(tab[1].toString()), tab[2].toString(), tab[3].toString(), tab[4].toString(), tab[5].toString());
-                count++;
-
-            }
-            a=0;
-            System.out.println("avant display");
-            displayQuestion(question);
-            System.out.println("apre disp");
-            while (a==0){
-                answer1.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        System.out.println("je click");
-                        count++;
-                        tab = DatabaseHelper.getQuestion(index_tab[count]);
-                        question = new Question_java(tab[0].toString(), Integer.parseInt(tab[1].toString()), tab[2].toString(), tab[3].toString(), tab[4].toString(), tab[5].toString());
-                        a++;
-                    }
-                });
-                answer2.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        count++;
-                        tab = DatabaseHelper.getQuestion(index_tab[count]);
-                        question = new Question_java(tab[0].toString(), Integer.parseInt(tab[1].toString()), tab[2].toString(), tab[3].toString(), tab[4].toString(), tab[5].toString());
-                        a++;
-                    }
-                });
-                answer3.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        count++;
-                        tab = DatabaseHelper.getQuestion(index_tab[count]);
-                        question = new Question_java(tab[0].toString(), Integer.parseInt(tab[1].toString()), tab[2].toString(), tab[3].toString(), tab[4].toString(), tab[5].toString());
-                        a++;
-                    }
-                });
-                answer4.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        count++;
-                        tab = DatabaseHelper.getQuestion(index_tab[count]);
-                        question = new Question_java(tab[0].toString(), Integer.parseInt(tab[1].toString()), tab[2].toString(), tab[3].toString(), tab[4].toString(), tab[5].toString());
-                        a++;
-                    }
-                });
-            }
-        }
+        Nques=getQuizz();
+        obj=DatabaseHelper.getQuestion(Nques[0]);
+        quesab=new Question_java(String.valueOf(obj[0]),(int)obj[1],String.valueOf(obj[2]),String.valueOf(obj[3]),String.valueOf(obj[4]),String.valueOf(obj[5]));
+        displayQuestion(quesab);
     }
 
 
@@ -151,7 +97,7 @@ public class Questions extends AppCompatActivity implements View.OnClickListener
     public static int[] getQuizz() {
         int[] retQuizz = new int[40];
         for(int i = 0; i < 40; ++i) {
-            retQuizz[i] = ((int) (Math.random() * 49)) + 1;
+            retQuizz[i] = ((int) (Math.random() * 40)) + 1;
         }
         return retQuizz;
     }
@@ -163,5 +109,23 @@ public class Questions extends AppCompatActivity implements View.OnClickListener
         if (userAns == Question_java.getCorrectAns()) {
             DatabaseHelper.updateScore();
         }
+    }
+    public void nextQ(View view) {
+        count++;
+        if(count<40){
+            System.out.println(Nques[count]);
+            compte=Integer.toString(count+1);
+            affiche="Question N° "+compte;
+            nbQuest.setText(affiche);
+            obj=DatabaseHelper.getQuestion(Nques[count]);
+            quesab=new Question_java(String.valueOf(obj[0]),(int)obj[1],String.valueOf(obj[2]),String.valueOf(obj[3]),String.valueOf(obj[4]),String.valueOf(obj[5]));
+            displayQuestion(quesab);
+        }
+        else {
+            Intent mist = new Intent(getApplicationContext(), Result_quizz.class);
+            startActivity(mist);
+            finish();
+        }
+
     }
 }

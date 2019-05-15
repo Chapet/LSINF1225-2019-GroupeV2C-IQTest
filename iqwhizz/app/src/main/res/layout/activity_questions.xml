@@ -75,7 +75,7 @@
                     <TextView
                         android:id="@+id/completetest"
                         android:layout_width="280dp"
-                        android:layout_height="152dp"
+                        android:layout_height="195dp"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="60dp"
@@ -94,7 +94,7 @@
                         android:gravity="center"
                         android:orientation="horizontal">
 
-                        <TextView
+                        <Button
                             android:id="@+id/repa"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -103,16 +103,18 @@
                             android:background="@drawable/myborder1"
                             android:ems="4"
                             android:text="Réponse a "
+                            android:onClick="nextQ"
                             android:textColor="@color/ecriture"
                             android:textSize="@dimen/subtext"
                             android:textStyle="bold"
                             android:typeface="serif" />
 
-                        <TextView
+                        <Button
                             android:id="@+id/repb"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="50dp"
+                            android:onClick="nextQ"
                             android:layout_marginTop="40dp"
                             android:layout_marginBottom="45dp"
                             android:background="@drawable/myborder1"
@@ -132,13 +134,14 @@
                         android:gravity="center"
                         android:orientation="horizontal">
 
-                        <TextView
+                        <Button
                             android:id="@+id/repc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="40dp"
                             android:layout_marginBottom="100dp"
                             android:background="@drawable/myborder1"
+                            android:onClick="nextQ"
                             android:ems="4"
                             android:text="Réponse c"
                             android:textColor="@color/ecriture"
@@ -146,7 +149,7 @@
                             android:textStyle="bold"
                             android:typeface="serif" />
 
-                        <TextView
+                        <Button
                             android:id="@+id/repd"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -154,6 +157,7 @@
                             android:layout_marginTop="40dp"
                             android:layout_marginBottom="100dp"
                             android:background="@drawable/myborder1"
+                            android:onClick="nextQ"
                             android:ems="4"
                             android:text="Réponse d"
                             android:textColor="@color/ecriture"
@@ -166,12 +170,6 @@
 
                 </LinearLayout>
             </ScrollView>
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Button" />
         </FrameLayout>
     </LinearLayout>
 

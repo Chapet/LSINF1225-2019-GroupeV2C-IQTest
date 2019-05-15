@@ -113,7 +113,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             mNeedUpdate = true;
     }
 
-    ///////////////////////////////
 
     static private DatabaseHelper dbhInstance;
 
@@ -135,16 +134,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return ret;
     }
 
-<<<<<<< HEAD
-    public static void insertInfoUser(String username, String password, int birthyear, String localite) {
-        Cursor mCur = dbhInstance.mDataBase.rawQuery("INSERT INTO User VALUES(" + username + "," + password + "," + birthyear + "," + localite + ")", null);
-
-
-        // INSERT INTO TABLE_NAME VALUES (value1,value2,value3,...valueN);
-    }
-
-=======
->>>>>>> f09a39fed0a50ca9402afc61023b0090849a6dce
     // Retourne une question a l'indexe num
     public static Object[] getQuestion(int num) {
         Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT * FROM QUESTION WHERE NumQuest = '" + num + "'", null);
@@ -197,17 +186,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-<<<<<<< HEAD
-}
-=======
-    public static int[] getQuizz() {
-        int[] retQuizz = new int[40];
-        for (int i = 0; i < 40; ++i) {
-            retQuizz[i] = ((int) (Math.random() * 49)) + 1;
-        }
-        return retQuizz;
-    }
-
     public static void insertInfoUser(String username, String password, int birthyear, String localite) {
 
         Cursor mCur = dbhInstance.mDataBase.rawQuery("INSERT INTO USER (Username,Password, Birthyear, Locality) VALUES('" + username + "','" + password + "','" + birthyear + "','" + localite + "')", null);
@@ -217,4 +195,3 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return;
     }
 }
->>>>>>> f09a39fed0a50ca9402afc61023b0090849a6dce
