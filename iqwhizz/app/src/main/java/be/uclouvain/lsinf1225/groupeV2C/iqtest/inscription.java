@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.sql.Blob;
 
 import static java.sql.Types.NULL;
 // Attention, on ne peut pas passer à l'écran suivant en ayant que sélectionner un avatar.
@@ -27,6 +28,7 @@ public class inscription extends AppCompatActivity {
     private EditText password;
     private EditText birthyear;
     private EditText locality;
+    private Blob image;
     private Button button;
     private Button avatarButton;
     private TextView usernameError;
@@ -68,7 +70,11 @@ public class inscription extends AppCompatActivity {
                 int userNameInput = username.getText().length();
                 int passwordInput = password.getText().length();
                 int birthyearInput = birthyear.getText().length();
-                int birthyearNumber = Integer.parseInt(birthyear.getText().toString());
+                int birthyearNumber = 0;
+                if (!birthyear.getText().toString().equals("")) {
+                    System.out.println("on rentre dans le if de l'inscription");
+                    birthyearNumber = Integer.parseInt(birthyear.getText().toString());
+                }
                 int localityInput = locality.getText().length();
                 if (userNameInput < 3 || passwordInput < 6 || birthyearInput != 4 || birthyearNumber > 2019 || birthyearNumber < 1920 ||
                         localityInput < 3 && userNameInput == NULL) {
@@ -99,7 +105,7 @@ public class inscription extends AppCompatActivity {
                         localityError.setVisibility(View.INVISIBLE);
                     }
                 } else {
-                    DatabaseHelper.insertInfoUser(username.getText().toString(), password.getText().toString(), Integer.parseInt(birthyear.getText().toString()), locality.getText().toString(), null);
+                    DatabaseHelper.insertInfoUser(username.getText().toString(), password.getText().toString(), Integer.parseInt(birthyear.getText().toString()), locality.getText().toString(),image);
                     DatabaseHelper.testDBUSER();
                     openActivity2();
                 }
