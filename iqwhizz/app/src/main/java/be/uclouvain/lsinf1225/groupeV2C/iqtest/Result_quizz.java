@@ -25,8 +25,8 @@ public class Result_quizz extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         score=(TextView) findViewById(R.id.score);
         QI=(TextView) findViewById(R.id.QI);
-        score.setText("35/40");
-        QI.setText("120 DE QI");
+        score.setText("13/40");
+        QI.setText((13+27)*2+" DE QI");
 
         this.seem = (Button) findViewById(R.id.see_mistakes);
         seem.setOnClickListener(new View.OnClickListener() {

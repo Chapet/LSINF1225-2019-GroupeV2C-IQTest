@@ -28,7 +28,7 @@ public class Question5 extends AppCompatActivity implements View.OnClickListener
     private TextView nbQuest;
     private String affiche;
     private String compte;
-    private Object [] obj=new Object[6];
+    private Object [] obj=new Object[7];
     private Question_java quesab;
 
     @Override
@@ -106,9 +106,8 @@ public class Question5 extends AppCompatActivity implements View.OnClickListener
     @Override
     public void onClick(View v) {
         userAns = (int) v.getTag(); // retourne l'index du bouton surlequel le user a appuyé
-        if (userAns == Question_java.getCorrectAns()) {
-            DatabaseHelper.updateScore();
-        }
+        obj=DatabaseHelper.getQuestion(Nques[count]);
+        DatabaseHelper.newAnswer(userAns, ((int)obj[1] == userAns), (int) obj[6], DatabaseHelper.getCurGameID());
     }
     public void nextQ(View view) {
         count++;
