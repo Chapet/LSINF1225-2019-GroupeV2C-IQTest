@@ -101,13 +101,7 @@ public class quest_flash extends AppCompatActivity implements View.OnClickListen
     public static int[] getQuizz() {
         int[] retQuizz = new int[48];
         for(int i = 1; i < 48; ++i) {
-            if (i!=5){
-                retQuizz[i-1] = i;
-            }
-            else {
-                retQuizz[i-1] = i+1;
-
-            }
+            retQuizz[i-1] = i;
         }
         System.out.println(retQuizz[0]);
         return retQuizz;
