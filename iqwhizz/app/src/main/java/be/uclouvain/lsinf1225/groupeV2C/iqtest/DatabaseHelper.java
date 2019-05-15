@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.sql.Blob;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -185,10 +186,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return;
     }
 
+    public static void insertInfoUser(String username, String password, int birthyear, String localite, Blob image) {
 
-    public static void insertInfoUser(String username, String password, int birthyear, String localite) {
-
-        Cursor mCur = dbhInstance.mDataBase.rawQuery("INSERT INTO USER (Username,Password, Birthyear, Locality) VALUES('" + username + "','" + password + "','" + birthyear + "','" + localite + "')", null);
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("INSERT INTO USER (Username,Password, Birthyear, Locality) VALUES('" + username + "','" + password + "','" + birthyear + "','" + localite + "','" + image + "')", null);
         while (mCur.moveToNext()) ;
         {
         }
