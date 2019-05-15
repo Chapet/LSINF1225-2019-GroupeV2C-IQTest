@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.sql.Blob;
 
 import static java.sql.Types.NULL;
 // Attention, on ne peut pas passer à l'écran suivant en ayant que sélectionner un avatar.
@@ -27,6 +28,7 @@ public class inscription extends AppCompatActivity {
     private EditText password;
     private EditText birthyear;
     private EditText locality;
+    private Blob image;
     private Button button;
     private Button avatarButton;
     private TextView usernameError;
@@ -103,7 +105,7 @@ public class inscription extends AppCompatActivity {
                         localityError.setVisibility(View.INVISIBLE);
                     }
                 } else {
-                    DatabaseHelper.insertInfoUser(username.getText().toString(), password.getText().toString(), Integer.parseInt(birthyear.getText().toString()), locality.getText().toString(), null);
+                    DatabaseHelper.insertInfoUser(username.getText().toString(), password.getText().toString(), Integer.parseInt(birthyear.getText().toString()), locality.getText().toString(),image);
                     DatabaseHelper.testDBUSER();
                     openActivity2();
                 }
