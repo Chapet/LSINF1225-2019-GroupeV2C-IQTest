@@ -105,15 +105,16 @@ public class Questions extends AppCompatActivity implements View.OnClickListener
 
     @Override
     public void onClick(View v) { //on ne rentre jamais içi, c'est la source des problèmes de finition
-        userAns = (int) v.getTag(); // retourne l'index du bouton surlequel le user a appuyé
+
+    }
+    public void nextQ(View view) {
+        userAns = (int) view.getTag(); // retourne l'index du bouton surlequel le user a appuyé
         obj=DatabaseHelper.getQuestion(Nques[count]);
+        count++;
         System.out.println("testOnClick Quest");
         System.out.println((int)obj[1]);
         DatabaseHelper.newAnswer(userAns, ((int)obj[1] == userAns), (int) obj[6], DatabaseHelper.getCurGameID());
         if(userAns == (int)obj[1]) {DatabaseHelper.updateScore();}
-    }
-    public void nextQ(View view) {
-        count++;
         System.out.println(DatabaseHelper.score);
         if(count<40){
             System.out.println(Nques[count]);
