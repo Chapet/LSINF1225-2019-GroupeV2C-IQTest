@@ -141,7 +141,7 @@ public class see_my_mistakes extends AppCompatActivity {
                 list[i].setBackgroundColor(Color.GREEN);
             }
             else{
-                list[i].setBackgroundColor(Color.GREEN);
+                list[i].setBackgroundColor(Color.RED);
             }
         }
 
