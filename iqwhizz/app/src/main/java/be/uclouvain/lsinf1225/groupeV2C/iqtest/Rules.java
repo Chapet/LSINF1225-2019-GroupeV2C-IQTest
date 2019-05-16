@@ -37,6 +37,7 @@ public class Rules extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 DatabaseHelper.newGame();
+                DatabaseHelper.score = 0;
                 Intent quest = new Intent(getApplicationContext(), Questions.class);
                 startActivity(quest);
                 finish();

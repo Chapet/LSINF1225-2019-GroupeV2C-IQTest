@@ -25,6 +25,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private SQLiteDatabase mDataBase;
     private final Context mContext;
     private boolean mNeedUpdate = false;
+    public static int score = 0;
 
     public static void testwhat(Context context) {
         DatabaseHelper dbHelp = new DatabaseHelper(context);
@@ -139,7 +140,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // Retourne une question a l'indexe num
     public static Object[] getQuestion(int num) {
         Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT * FROM QUESTION WHERE NumQuest = '" + num + "'", null);
-        Object tab[] = new Object[6];
+        Object tab[] = new Object[7];
         System.out.println("je suis la");
         while (mCur.moveToNext()) {
             tab[0] = mCur.getString(2); // statement
@@ -148,6 +149,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             tab[3] = mCur.getString(5);
             tab[4] = mCur.getString(6);
             tab[5] = mCur.getString(7); // answer 4
+            tab[6] = num; //QuestNum
         }
         return tab;
     }
@@ -164,16 +166,44 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return false;
     }
 
-    public static void updateScore() { //updates the score
-
-    }
-
     public static void newGame() { //creates a new game in the database
         Cursor mCur = dbhInstance.mDataBase.rawQuery("INSERT INTO GAME (Type, User) VALUES('" + 40 + "','" + connexion.curUser + "')", null);
-        while (mCur.moveToNext()) ;
+        while (mCur.moveToNext())
         {
         }
         return;
+    }
+
+    public static int getCurGameID() {
+        int ret = 0;
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("select max(NumGame) from GAME", null);
+        while (mCur.moveToNext())
+        {
+          ret = mCur.getInt(0);
+        }
+        return ret;
+    }
+
+    public static void newAnswer(int userAns, boolean isCorrect, int numQuest, int numGame) { //creates a new game in the database
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("INSERT INTO ANSWER (UserAns, IsCorrect, NumQuest, NumGame, User) VALUES('" + userAns + "','" + ((isCorrect)?1:0) + "','"+ numQuest +"','"+numGame+"','"+connexion.curUser+"')", null);
+        while (mCur.moveToNext())
+        {
+        }
+        return;
+    }
+
+    public static int getScore() {
+        int ret = 0;
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT IsCorrect FROM ANSWER WHERE (NumGame = '"+ DatabaseHelper.getCurGameID() + "')", null);
+        while (mCur.moveToNext())
+        {
+                ret += mCur.getInt(2);
+        }
+        return ret;
+    }
+
+    public static void updateScore() {
+        score++;
     }
 
     public static void testDBUSER() {
@@ -187,9 +217,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return;
     }
 
-    public static void insertInfoUser2(String username, String password, int birthyear, String localite, Blob image) {
+    public static void insertInfoUser(String username, String password, int birthyear, String localite, Blob image) {
 
-        Cursor mCur = dbhInstance.mDataBase.rawQuery("INSERT INTO USER (Username,Password, Birthyear, Locality,ProfilePic) VALUES('" + username + "','" + password + "','" + birthyear + "','" + localite + "','" + image + "')", null);
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("INSERT INTO USER (Username,Password, Birthyear, Locality) VALUES('" + username + "','" + password + "','" + birthyear + "','" + localite + "','" + image + "')", null);
         while (mCur.moveToNext()) ;
         {
         }
