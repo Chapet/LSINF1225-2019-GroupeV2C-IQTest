@@ -2,6 +2,7 @@ package be.uclouvain.lsinf1225.groupeV2C.iqtest;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -9,13 +10,17 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DrawableUtils;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.sql.Blob;
 
 public class menu extends AppCompatActivity {
 
@@ -25,6 +30,9 @@ public class menu extends AppCompatActivity {
     private TextView flashtest;
     private TextView Myresult;
     private menu addfriends;
+    private ImageView headphot;
+    private Blob im;
+    private ImageView head;
     DrawerLayout dLayout;
 
     @Override
@@ -83,7 +91,12 @@ public class menu extends AppCompatActivity {
         toolbar.setTitle(getResources().getString(R.string.menu));
         toolbar.setNavigationIcon(R.drawable.log_out);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        im=inscription.getImage();
+        headphot=(ImageView)im;
+        if(headphot!=null){
+            head=findViewById(R.id.imageView);
+            // A MODIFIER !!!!
+        }
         setNavigationDrawer(); // call method
 
     }
