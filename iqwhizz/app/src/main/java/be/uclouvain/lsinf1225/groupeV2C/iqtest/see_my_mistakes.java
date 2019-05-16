@@ -51,7 +51,6 @@ public class see_my_mistakes extends AppCompatActivity {
     private Button button39;
     private Button button40;
     private Button[] list = new Button[40];
-    private boolean bool = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -137,7 +136,7 @@ public class see_my_mistakes extends AppCompatActivity {
         list[38] = button39;
         list[39] = button40;
         for(int i = 0; i < list.length; i++){
-            if(bool){
+            if(DatabaseHelper.getCorrect(i, 40)){
                 list[i].setBackgroundColor(Color.GREEN);
             }
             else{

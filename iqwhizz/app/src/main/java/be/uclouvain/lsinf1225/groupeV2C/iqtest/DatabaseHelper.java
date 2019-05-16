@@ -199,6 +199,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return ret;
     }
 
+    public static boolean getCorrect(int index, int nbQuest) {
+        int ret=0;
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT IsCorrect FROM ANSWER WHERE (NumGame = '"+ DatabaseHelper.getCurGameID() + "' AND AnswerID = (SELECT max(AnswerID) FROM ANSWER)+'"+index+"'-'"+nbQuest+"')", null);
+        while (mCur.moveToNext())
+        {
+            ret = mCur.getInt(0);
+        }
+        return (ret>0);
+    }
+
     public static void updateScore() {
         score++;
     }
