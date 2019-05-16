@@ -217,9 +217,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return;
     }
 
-    public static void insertInfoUser(String username, String password, int birthyear, String localite, Blob image) {
+    public static void insertInfoUser2(String username, String password, int birthyear, String localite, Blob image) {
 
-        Cursor mCur = dbhInstance.mDataBase.rawQuery("INSERT INTO USER (Username,Password, Birthyear, Locality) VALUES('" + username + "','" + password + "','" + birthyear + "','" + localite + "','" + image + "')", null);
+        Cursor mCur = dbhInstance.mDataBase.rawQuery("INSERT INTO USER (Username,Password, Birthyear, Locality,ProfilePic) VALUES('" + username + "','" + password + "','" + birthyear + "','" + localite + "','" + image + "')", null);
         while (mCur.moveToNext()) ;
         {
         }

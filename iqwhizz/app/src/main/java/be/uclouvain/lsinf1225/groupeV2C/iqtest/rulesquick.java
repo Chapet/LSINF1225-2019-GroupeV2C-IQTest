@@ -22,7 +22,7 @@ public class rulesquick extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rules);
+        setContentView(R.layout.activity_rulesquick);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar); // get the reference of Toolbar
         setSupportActionBar(toolbar); // Setting/replace toolbar as the ActionBar
         toolbar.setTitle(getResources().getString(R.string.Rules));

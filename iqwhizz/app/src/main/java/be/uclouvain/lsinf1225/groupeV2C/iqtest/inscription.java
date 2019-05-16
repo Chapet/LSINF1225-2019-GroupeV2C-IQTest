@@ -55,7 +55,6 @@ public class inscription extends AppCompatActivity {
         avatarButton = findViewById(R.id.activity_main_button2);
 
         imageView = findViewById(R.id.image1);
-        image=(Blob)imageView;
         avatarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -115,9 +114,6 @@ public class inscription extends AppCompatActivity {
 
     }
 
-    public static Blob getImage(){
-        return image;
-    }
 
     private void openGallery() {
         Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);

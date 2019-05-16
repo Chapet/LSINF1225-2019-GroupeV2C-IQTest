@@ -33,6 +33,7 @@ public class menu extends AppCompatActivity {
     private ImageView headphot;
     private Blob im;
     private ImageView head;
+    private int sound=1;
     DrawerLayout dLayout;
 
     @Override
@@ -91,7 +92,6 @@ public class menu extends AppCompatActivity {
         toolbar.setTitle(getResources().getString(R.string.menu));
         toolbar.setNavigationIcon(R.drawable.log_out);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        im=inscription.getImage();
         headphot=(ImageView)im;
         if(headphot!=null){
             head=findViewById(R.id.imageView);
@@ -143,6 +143,15 @@ public class menu extends AppCompatActivity {
                 } else if (itemId == R.id.third) {
                     Intent ranking = new Intent(getApplicationContext(), ranking.class);
                     startActivity(ranking);
+                } else if (itemId == R.id.cinquo) {
+                    if (sound==1){
+                        MainActivity.ring.pause();
+                        sound=0;
+                    }
+                    else{
+                        MainActivity.ring.start();
+                        sound=1;
+                    }
                 }
                 else if (itemId == R.id.seix) {
                     Intent signup = new Intent(getApplicationContext(), inscription.class);

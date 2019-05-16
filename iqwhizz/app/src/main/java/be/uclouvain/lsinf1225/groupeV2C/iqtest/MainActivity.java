@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private TextView tapbut;
-    public MediaPlayer ring;
+    public static MediaPlayer ring;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent co = new Intent(getApplicationContext(), connexion.class);
                 startActivity(co);
-                finish();
             }
         });
 

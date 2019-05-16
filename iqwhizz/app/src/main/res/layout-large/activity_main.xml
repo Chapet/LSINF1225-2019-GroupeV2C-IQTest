@@ -43,7 +43,7 @@
             android:typeface="serif"
             android:textSize="28sp"
             android:textColor="@color/ecriture"
-            android:layout_marginBottom="60dp"/>
+            android:layout_marginBottom="300dp"/>
 
     </LinearLayout>
 </ScrollView>
