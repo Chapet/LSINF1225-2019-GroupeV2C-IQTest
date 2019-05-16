@@ -197,7 +197,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT IsCorrect FROM ANSWER WHERE (NumGame = '"+ DatabaseHelper.getCurGameID() + "')", null);
         while (mCur.moveToNext())
         {
-                ret += mCur.getInt(2);
+                ret += mCur.getInt(0);
         }
         return ret;
     }
