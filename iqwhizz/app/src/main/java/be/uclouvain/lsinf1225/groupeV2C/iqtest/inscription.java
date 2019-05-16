@@ -87,7 +87,7 @@ public class inscription extends AppCompatActivity {
                     if (passwordInput < 6 || passwordInput == NULL ) {
                         passwordError.setVisibility(View.VISIBLE);
                     }
-                    if (passwordInput > 20 || passwordInput == NULL) {
+                    else if (passwordInput > 20 || passwordInput == NULL) {
                         passwordError.setVisibility(View.VISIBLE);
                     } else {
                         passwordError.setVisibility(View.INVISIBLE);
