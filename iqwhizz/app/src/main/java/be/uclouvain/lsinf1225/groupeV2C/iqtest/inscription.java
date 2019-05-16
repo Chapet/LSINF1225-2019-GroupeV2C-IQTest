@@ -28,7 +28,7 @@ public class inscription extends AppCompatActivity {
     private EditText password;
     private EditText birthyear;
     private EditText locality;
-    private Blob image;
+    private static Blob image;
     private Button button;
     private Button avatarButton;
     private TextView usernameError;
@@ -55,7 +55,6 @@ public class inscription extends AppCompatActivity {
         avatarButton = findViewById(R.id.activity_main_button2);
 
         imageView = findViewById(R.id.image1);
-
         avatarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,6 +77,7 @@ public class inscription extends AppCompatActivity {
                 int localityInput = locality.getText().length();
                 if (userNameInput < 3 || passwordInput < 6 || birthyearInput != 4 || birthyearNumber > 2019 || birthyearNumber < 1920 ||
                         localityInput < 3 && userNameInput == NULL) {
+                    System.out.println("une cond de fausse");
                     if (userNameInput < 3 || userNameInput == NULL) {
                         usernameError.setVisibility(View.VISIBLE);
                     } else {
@@ -105,7 +105,7 @@ public class inscription extends AppCompatActivity {
                         localityError.setVisibility(View.INVISIBLE);
                     }
                 } else {
-                    DatabaseHelper.insertInfoUser(username.getText().toString(), password.getText().toString(), Integer.parseInt(birthyear.getText().toString()), locality.getText().toString(),image);
+                    DatabaseHelper.insertInfoUser2(username.getText().toString(), password.getText().toString(), Integer.parseInt(birthyear.getText().toString()), locality.getText().toString(),image);
                     DatabaseHelper.testDBUSER();
                     openActivity2();
                 }
@@ -113,6 +113,7 @@ public class inscription extends AppCompatActivity {
         });
 
     }
+
 
     private void openGallery() {
         Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);

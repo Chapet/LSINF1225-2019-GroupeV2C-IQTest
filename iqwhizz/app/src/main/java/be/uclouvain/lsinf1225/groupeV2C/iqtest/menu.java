@@ -2,6 +2,7 @@ package be.uclouvain.lsinf1225.groupeV2C.iqtest;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -9,13 +10,17 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DrawableUtils;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.sql.Blob;
 
 public class menu extends AppCompatActivity {
 
@@ -25,6 +30,10 @@ public class menu extends AppCompatActivity {
     private TextView flashtest;
     private TextView Myresult;
     private menu addfriends;
+    private ImageView headphot;
+    private Blob im;
+    private ImageView head;
+    private int sound=1;
     DrawerLayout dLayout;
 
     @Override
@@ -83,7 +92,11 @@ public class menu extends AppCompatActivity {
         toolbar.setTitle(getResources().getString(R.string.menu));
         toolbar.setNavigationIcon(R.drawable.log_out);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        headphot=(ImageView)im;
+        if(headphot!=null){
+            head=findViewById(R.id.imageView);
+            // A MODIFIER !!!!
+        }
         setNavigationDrawer(); // call method
 
     }
@@ -130,6 +143,15 @@ public class menu extends AppCompatActivity {
                 } else if (itemId == R.id.third) {
                     Intent ranking = new Intent(getApplicationContext(), ranking.class);
                     startActivity(ranking);
+                } else if (itemId == R.id.cinquo) {
+                    if (sound==1){
+                        MainActivity.ring.pause();
+                        sound=0;
+                    }
+                    else{
+                        MainActivity.ring.start();
+                        sound=1;
+                    }
                 }
                 else if (itemId == R.id.seix) {
                     Intent signup = new Intent(getApplicationContext(), inscription.class);
