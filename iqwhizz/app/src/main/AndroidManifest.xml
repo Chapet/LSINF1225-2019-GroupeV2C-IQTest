@@ -32,6 +32,11 @@
             android:parentActivityName=".Result_quizz"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".see_my_mistakes_flash"
+            android:label="@string/see_my_mistakes"
+            android:parentActivityName=".Result_quizz"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".Result_quizz"
             android:label="Result"
             android:parentActivityName=".menu"
@@ -39,6 +44,11 @@
         <activity
             android:name=".Result_quizz5"
             android:label="Result5"
+            android:parentActivityName=".menu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Result_quizz_flash"
+            android:label="Result"
             android:parentActivityName=".menu"
             android:screenOrientation="portrait" />
         <activity

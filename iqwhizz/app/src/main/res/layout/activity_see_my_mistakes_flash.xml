@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="left"
+    android:background="@drawable/background"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- include your toolbar layout-->
+        <include layout="@layout/toolbar"/>
+
+        <!-- Let's add fragment -->
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/ScrollView01"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <Button
+                        android:id="@+id/rep1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/reponse1"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+
+                    <Button
+                        android:id="@+id/rep2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_2"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+
+                    <Button
+                        android:id="@+id/rep3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_3"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+
+
+                    <Button
+                        android:id="@+id/rep4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_4"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+
+                    <Button
+                        android:id="@+id/rep5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_5"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+
+                    <Button
+                        android:id="@+id/rep6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_6"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+
+                    <Button
+                        android:id="@+id/rep7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_7"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+
+                    <Button
+                        android:id="@+id/rep8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_8"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_9"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_10"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_11"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_12"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_13"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_14"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="R\E9ponse 15"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="R\E9ponse 16"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="R\E9ponse 17"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_18"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_19"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_20"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep21"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:layout_marginBottom="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_21"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_22"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_23"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_24"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep25"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_25"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep26"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_26"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+
+
+                    <Button
+                        android:id="@+id/rep27"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_27"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+
+                    <Button
+                        android:id="@+id/rep28"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_28"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+
+                    <Button
+                        android:id="@+id/rep29"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_29"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+
+                    <Button
+                        android:id="@+id/rep30"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_30"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+
+                    <Button
+                        android:id="@+id/rep31"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_31"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+
+                    <Button
+                        android:id="@+id/rep32"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_32"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep33"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_33"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep34"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_34"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep35"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_35"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep36"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_36"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep37"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_37"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep38"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_38"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep39"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_39"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep40"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_40"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep41"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_41"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep42"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_42"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep43"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_43"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep44"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_44"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep45"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_45"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep46"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_46"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+                    <Button
+                        android:id="@+id/rep47"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/boutonctopbot"
+                        android:text="@string/r_ponse_47"
+                        android:textColor="@color/ecriture"
+                        android:textSize="@dimen/bouton" />
+
+
+
+                </LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+    </LinearLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

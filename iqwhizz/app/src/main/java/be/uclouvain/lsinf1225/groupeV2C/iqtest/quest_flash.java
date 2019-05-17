@@ -28,7 +28,7 @@ public class quest_flash extends AppCompatActivity implements View.OnClickListen
     private TextView nbQuest;
     private String affiche;
     private String compte;
-    private Object [] obj=new Object[6];
+    private Object [] obj=new Object[7];
     private Question_java quesab;
 
     @Override
@@ -48,17 +48,14 @@ public class quest_flash extends AppCompatActivity implements View.OnClickListen
         answer3 = findViewById(R.id.repc);
         answer4 = findViewById(R.id.repd);
         statement = findViewById(R.id.completetest);
-        answer1.setTag(0);
-        answer2.setTag(1);
-        answer3.setTag(2);
-        answer4.setTag(3);
+        answer1.setTag(1);
+        answer2.setTag(2);
+        answer3.setTag(3);
+        answer4.setTag(4);
         Nques=getQuizz();
         obj=DatabaseHelper.getQuestion(Nques[0]);
-        System.out.println("aaaaaaa");
         quesab=new Question_java(String.valueOf(obj[0]),(int)obj[1],String.valueOf(obj[2]),String.valueOf(obj[3]),String.valueOf(obj[4]),String.valueOf(obj[5]));
-        System.out.println("ok");
         displayQuestion(quesab);
-        System.out.println("disp");
     }
 
 
@@ -99,8 +96,8 @@ public class quest_flash extends AppCompatActivity implements View.OnClickListen
     }
 
     public static int[] getQuizz() {
-        int[] retQuizz = new int[48];
-        for(int i = 1; i < 48; ++i) {
+        int[] retQuizz = new int[47];
+        for(int i = 1; i < 46; ++i) {
             retQuizz[i-1] = i;
         }
         System.out.println(retQuizz[0]);
@@ -110,24 +107,25 @@ public class quest_flash extends AppCompatActivity implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        userAns = (int) v.getTag(); // retourne l'index du bouton surlequel le user a appuyé
-        if (userAns == Question_java.getCorrectAns()) {
-            DatabaseHelper.updateScore();
-        }
+
     }
     public void nextQ(View view) {
+        userAns = (int) view.getTag(); // retourne l'index du bouton surlequel le user a appuyé
+        obj=DatabaseHelper.getQuestion(Nques[count]);
         count++;
+        DatabaseHelper.newAnswer(userAns, ((int)obj[1] == userAns), (int) obj[6], DatabaseHelper.getCurGameID());
+        if(userAns == (int)obj[1]) {DatabaseHelper.updateScore();}
         if(count<47){
             System.out.println(Nques[count]);
             compte=Integer.toString(count+1);
             affiche="Question N° "+compte;
             nbQuest.setText(affiche);
-            obj=DatabaseHelper.getQuestion(Nques[count]);
+            obj=DatabaseHelper.getQuestion(Nques[count-1]);
             quesab=new Question_java(String.valueOf(obj[0]),(int)obj[1],String.valueOf(obj[2]),String.valueOf(obj[3]),String.valueOf(obj[4]),String.valueOf(obj[5]));
             displayQuestion(quesab);
         }
         else {
-            Intent mist = new Intent(getApplicationContext(), Result_quizz.class);
+            Intent mist = new Intent(getApplicationContext(), Result_quizz_flash.class);
             startActivity(mist);
             finish();
         }
