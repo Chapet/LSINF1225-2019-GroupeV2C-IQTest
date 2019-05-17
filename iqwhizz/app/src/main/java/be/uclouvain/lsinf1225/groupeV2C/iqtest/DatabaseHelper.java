@@ -204,6 +204,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public static boolean getCorrect(int index, int nbQuest) {
         int ret=0;
+        index ++;
         Cursor mCur = dbhInstance.mDataBase.rawQuery("SELECT IsCorrect FROM ANSWER WHERE (NumGame = '"+ DatabaseHelper.getCurGameID() + "' AND AnswerID = (SELECT max(AnswerID) FROM ANSWER)+'"+index+"'-'"+nbQuest+"')", null);
         while (mCur.moveToNext())
         {

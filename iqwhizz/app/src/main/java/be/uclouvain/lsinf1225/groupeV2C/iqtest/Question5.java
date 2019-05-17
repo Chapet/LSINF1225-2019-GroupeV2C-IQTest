@@ -48,10 +48,10 @@ public class Question5 extends AppCompatActivity implements View.OnClickListener
         answer3 = findViewById(R.id.repc);
         answer4 = findViewById(R.id.repd);
         statement = findViewById(R.id.completetest);
-        answer1.setTag(0);
-        answer2.setTag(1);
-        answer3.setTag(2);
-        answer4.setTag(3);
+        answer1.setTag(1);
+        answer2.setTag(2);
+        answer3.setTag(3);
+        answer4.setTag(4);
         Nques=getQuizz();
         obj=DatabaseHelper.getQuestion(Nques[0]);
         quesab=new Question_java(String.valueOf(obj[0]),(int)obj[1],String.valueOf(obj[2]),String.valueOf(obj[3]),String.valueOf(obj[4]),String.valueOf(obj[5]));
@@ -105,13 +105,14 @@ public class Question5 extends AppCompatActivity implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
-        userAns = (int) v.getTag(); // retourne l'index du bouton surlequel le user a appuyé
-        obj=DatabaseHelper.getQuestion(Nques[count]);
-        DatabaseHelper.newAnswer(userAns, ((int)obj[1] == userAns), (int) obj[6], DatabaseHelper.getCurGameID());
-        if(userAns == (int)obj[1]) {DatabaseHelper.updateScore();}
+
     }
     public void nextQ(View view) {
+        userAns = (int) view.getTag(); // retourne l'index du bouton surlequel le user a appuyé
+        obj=DatabaseHelper.getQuestion(Nques[count]);
         count++;
+        DatabaseHelper.newAnswer(userAns, ((int)obj[1] == userAns), (int) obj[6], DatabaseHelper.getCurGameID());
+        if(userAns == (int)obj[1]) {DatabaseHelper.updateScore();}
         if(count<5){
             System.out.println(Nques[count]);
             compte=Integer.toString(count+1);
@@ -122,7 +123,7 @@ public class Question5 extends AppCompatActivity implements View.OnClickListener
             displayQuestion(quesab);
         }
         else {
-            Intent mist = new Intent(getApplicationContext(), Result_quizz.class);
+            Intent mist = new Intent(getApplicationContext(), Result_quizz5.class);
             startActivity(mist);
             finish();
         }
